@@ -1,0 +1,229 @@
+---
+title: "Visit Scotland. A glimpse"
+author: "Juan Ignacio De Vicente"
+date: "2022-12-28"
+output: html_document
+---
+
+Diary. Wednesday 28/12/22. Create folders, documents, check data. Revise main questions and add notes with with more questions.
+Will be necessary join all the tables?
+Diary. Thursday. stop try to clean data and start create some of the code to answer the questions.
+Diary. Friday. Work in question 3, join two dataset for investigate an answer.
+
+
+
+
+    Dictionary
+It is unclear the meaning of some  variables.
+
+    Some reflections about the data.
+
+In "Regional domestic tourism data" the date_code is quite unclear, is a period of 2 or 3 years from 1st January till 31st December? Also, in some case the periods take years from other periods. The data has a period-time from 2010 till 2019 that is different from other data sets. 
+Try to avoid this data 
+
+
+Regions means Countries inside GB ( NOT UK which include North Ireland) that means England, Scotland and Wales. However the data doesn't have any observation with Wales, why?.'All GB' means the three countries or only England and Scotland?. 
+
+Is "All" equivalent to "Na"/ "NaN"/ "null".... 
+
+Differences between expenditure and visits. I have my iterepretation.
+
+What is the meaning of "feature_code"
+
+You shouldn't say that " Visit Scotland markets Scotland to all parts of the world to attract visitors" when your data provided is only partial Great Britain even not all UK.
+
+So looking for a local tourism. tourism as soft power inside the Isle?
+
+Standards were change in 2019, the data is before that date.
+
+
+ Idea : Perhaps need division by Scotland's regions, sites. We should have data from visitors outside of GB in order to have a better understanding of the visitor and improve their experience and compare with inside of GB and see the weight of each group.
+
+Are the data right/ precise? Correct reading
+
+Social grades. maybe needed for answer any question
+
+
+AB	Higher & intermediate managerial, administrative, professional occupations	
+C1	Supervisory, clerical & junior managerial, administrative, professional occupations	
+C2	Skilled manual occupations	
+DE	Semi-skilled & unskilled manual occupations, Unemployed and lowest grade occupations
+
+
+Assumptions.
+Percentage in accommodation_occupancy means "days per year" but is an average of what?
+
+Better no compare by regions? 
+
+THE DAta HAs To BE Compare between 2013-2015 OR 2016 -2019. 
+
+So any question relate to  regional_domestic _tourism will be checked from 2016
+
+Main Questions.
+
+_What kind of tourism activity generates the highest income for Scotland?_
+_Which kind of activity generates the most visits to sites?_
+_Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_
+_What type of locations receive the most visits? What kinds of locations do people spend the most in?_
+_Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have_
+_When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?_
+_What type of accommodation is most popular? Is there a difference by location?_
+_How have general tourism rates changed over time?_
+_Is there any way to predict spending and visits for Visit Scotland?_
+
+
+
+
+
+INTRODUCTION / SLICE.
+
+IN 2020 JUST BEFORE THE PANDEMIC, VISIT SCOTLAND IN CONJUCTION WITH VISIT ENGLAND AND VISITWALES CHANGE THE PARAMETERS FOR RECORDING THE VISISTS.... SEE THE PDF.
+OUR INTENTION IS SHOW A GLIMPSE ABOUT HOW WAS FOR THE COUNTRY THE LAST YEAR 2019 BEFORE THE INTRODUCCTION OF THE NEW METHOD AND THE DISRUPTION CAUSED BY THE PANDEMIC AND THE LOCKDOWNS RESTRICTIONS DURING 2020,2021 AND THE BEGINING OF 2022 PLUS THE CURRENT WORLD ECONOMIC RECESSION.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q1  __THIS ANSWER IS NEED TO CHECK AFTER BACK TO CODECLAN__
+For the first question,
+it is unclear which year they want, between activities is "Entertainment - to a cinema, concert or theatre" . "The answer is went out for a meal"In any year from 2013 to 2019 the highest income for Scotland is "went out for a meal", so unless someone living in the English borders that come to Scotland for a lunch , it could be believe in an internal travel 
+
+The highest
+
+2019-	2078  million pounds (GBP)		Went out for a meal
+2018- 1959	million pounds (GBP)		Went out for a meal
+2017- 2208	million pounds (GBP)		Went out for a meal
+2016- 1892	million pounds (GBP)		Went out for a meal	
+2015- 1631	million pounds (GBP)		Went out for a meal
+2014-	1966  million pounds (GBP)		Went out for a meal
+2013- 1675  million pounds (GBP)		Went out for a meal
+
+
+The second highest 
+
+2019-	1841 million pounds (GBP)		Visited friends or family for leisure	
+2018-	1698 million pounds (GBP)		Visited friends or family for leisure
+2017-	1818 million pounds (GBP)		Visited friends or family for leisure	
+2016-	1380 million pounds (GBP)		Shopping for items that you do not regularly buy
+2015-	1186 million pounds (GBP)		Visited friends or family for leisure
+2014-	1536 million pounds (GBP)		Shopping for items that you do not regularly buy
+2013-	1512 million pounds (GBP)		Shopping for items that you do not regularly buy
+
+
+All income (Question did not ask). This is not real there is a difference of nearly 1 thousand million pounds between 2015 and 2016
+
+2019	5777 million pounds (GBP)		All	
+2018	5474 million pounds (GBP)		All	
+2017	5995 million pounds (GBP)		All	
+2016	4916 million pounds (GBP)		All
+2015	3922 million pounds (GBP)		All
+2014	5020 million pounds (GBP)		All	
+2013	4647 million pounds (GBP)		All
+
+
+Q2 Sites visits by activity.
+__THIS ANSWER IS NEED TO CHECK AFTER BACK TO CODECLAN__
+
+In order to answer the second question, we did a full_join of two dataset: "tourism_location_activities <-full_join(tourism_day_visits_location,tourism_day_visits_activities)"
+
+Is the data complete ? The data is incomplete and it is from 2013 to 2019. 
+
+
+
+There is a 'problem' the maths doesnt work for 2013  the 124 million visits 'All areas' is unequal to the sum of different locations. Without filter NA there are a lot of more information = millions visits lost. I show the first one by year and the first one with tourism activity.
+
+
+VISITS
+2019- 59million visit	  City/large town           unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2019-  9	              Seaside resort or town	Day trips/excursions for other leisure purpose   tourism_activity (5th)
+2018- 64	              City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2018- 38	              Small town	            	Went out for a meal  tourism_activity(2nd)
+2017- 70	              City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2017- 21	              Rural countryside		    Shopping for items that you do not regularly buy  tourism_activity(3rd)
+2016- 61                City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2016-  5	              Seaside - beach	        Special personal events e.g. wedding, graduation  tourism_activity(6th)
+2015- 59                City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2015- 11                Village                 Visitor attraction e.g. theme park, museum, zoo  tourism_activity(4th)
+2014- 59 million visit  City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow (commonwealth games Glasgow)
+2014- 19 million visit  Rural countryside       General day out/ to explore an area  tourism_activity(3rd)
+2013- 59 million visits	City/large town	         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2013- 18                Rural countryside       Night out to a bar, pub and/or club  tourism_activity(3rd)
+
+
+EXPENDITURE (1st place and 2nd place) No necessary 
+
+2019- 3400 million pounds (GBP)		City/large town	    unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow         
+2019- 1456	                      Small town          unknown tourism_activity (2nd)
+2018- 3111	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2018- 1234	                      Small town         unknown tourism_activity (2nd)
+2017- 3379	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2017- 1377	                      Small town          unknown tourism_activity (2nd)
+2016- 2630	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2016- 1037	                      Small town          unknown tourism_activity (2nd)
+2015- 2254	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2015-  914	                      Small town          unknown tourism_activity (2nd)
+2014- 2873 	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2014- 1398	                      Small town         unknown tourism_activity (2nd)
+2013- 2850	                      City/large town    unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2013- 1035	                      Small town          unknown tourism_activity (2nd)
+
+
+
+
+
+
+
+
+
+Q3 __THIS ANSWER IS NEED TO CHECK AFTER BACK TO CODECLAN__
+Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_
+
+What is the meaning of 'All' in 'age'? All the groups or Na?  
+
+There is 308 observations in the variable 'age' in the data set 'tourism_day_visits_demmographics' and 204 'All'. Means 308 -224 = 84 observations with any age, very small to do a very accurate estimation about key demographic visitors 
+
+
+
+
+
+
+
+
+
+
+Q4 What type of locations receive the most visits? What kinds of locations do people spend the most in? = Q2?
+
+__THIS ANSWER IS NEED TO CHECK AFTER BACK TO CODECLAN__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q5 _Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have_
+
+
+
+
+

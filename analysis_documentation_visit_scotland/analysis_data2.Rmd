@@ -1,0 +1,453 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+```{r}
+# read/ check data. data.frame
+# need create - changed columns , maybe by redgex.
+regional_domestic_tourism <- read_csv("../raw_data/regional_domestic_tourism.csv") %>% clean_names()
+
+regional_domestic_tourism_clean<- regional_domestic_tourism %>% 
+  rename(year = date_code) %>% 
+  rename(area = feature_code) %>% 
+  mutate(area = recode(area, 
+                       "S92000003"= "Scotland",
+                       "S12000015" =	"Fife","S12000024"	= "Perth and Kinross", "S12000044"	= "North Lanarkshire", "S12000046"	= "Glasgow City",
+"S12000005"	= "Clackmannanshire","S12000006"	= "Dumfries and Galloway","S12000008"	= "East Ayrshire","S12000010"	= "East Lothian",
+"S12000011"	= "East Renfrewshire","S12000013"	= "Na h-Eileanan Siar","S12000014"	= "Falkirk","S12000017"	= "Highland",
+"S12000009"	= "East Dunbartonshire","S12000043"	= " Glasgow City","S12000003"	= "Angus","S12000007"	= "Dundee City",
+"S12000037"	= "Glasgow City","S12000022"	= "North Lanarkshire","S12000018"	= "Inverclyde","S12000019"	= "Midlothian",
+"S12000020"	= "Moray","S12000021"	= "North Ayrshire","S12000023"	= "Orkney Islands","S12000026"	= "Scottish Borders",
+"S12000027"	= "Shetland Islands","S12000028"	= "South Ayrshire","S12000029"	= "South Lanarkshire","S12000030"	= "Stirling",
+"S12000033"	= "Aberdeen City","S12000034"	= "Aberdeenshire","S12000035"	= "Argyll and Bute","S12000036"	= "City of Edinburgh",
+"S12000038"	= "Renfrewshire","S12000039"	= "West Dunbartonshire","S12000040"	= "West Lothian","S12000041"	= "Angus",
+"S12000042"	= "Dundee City","S12000045"	= "East Dunbartonshire","S12000047"	= "Fife","S12000048"	= "Perth and Kinross",
+"S12000049"	= "Glasgow City","S12000050"	= "North Lanarkshire"))
+
+```
+
+```{r}
+regional_domestic_tourism_clean %>% 
+  filter(region_of_residence != 'Scotland') %>% 
+  arrange(desc(year))
+```
+
+
+
+
+
+```{r}
+# read/ check data. data.frame
+# need creat - changed columns , maybe by redgex.
+scottish_accomodation_occupancy <- read_csv("../raw_data/scottish_accomodation_occupancy.csv")%>% clean_names()
+
+scottish_accomodation_occupancy_clean <- scottish_accomodation_occupancy %>%
+  rename(year = date_code) %>% 
+  rename(area = feature_code) %>% 
+  mutate(area = recode(area, 
+                       "S92000003"= "Scotland"))
+```
+
+```{r}
+tourism_day_visits_activities <- read.csv("../raw_data/tourism_day_visits_activities.csv")%>% clean_names()
+
+tourism_day_visits_activities_clean <- tourism_day_visits_activities %>% 
+   rename(year = date_code) %>% 
+  rename(area = feature_code) %>% 
+  mutate(area = recode(area, 
+                       "S92000003"= "Scotland"))
+
+tourism_day_visits_activities_clean
+```
+
+
+```{r}
+tourism_day_visits_demmographics <- read_csv("../raw_data/tourism_day_visits_demographics.csv") %>% clean_names()
+
+tourism_day_visits_demmographics_clean<- tourism_day_visits_demmographics %>% 
+    rename(year = date_code) %>% 
+  rename(area = feature_code) %>% 
+  mutate(area = recode(area, 
+                       "S92000003"= "Scotland"))
+tourism_day_visits_demmographics_clean
+```
+
+
+```{r}
+tourism_day_visits_location <- read_csv("../raw_data/tourism_day_visits_location.csv") %>% clean_names()
+tourism_day_visits_location_clean<- tourism_day_visits_location %>% 
+  rename(year = date_code) %>% 
+  rename(area = feature_code) %>% 
+  mutate(area = recode(area, 
+                       "S92000003"= "Scotland"))
+tourism_day_visits_location_clean
+```
+
+
+
+```{r}
+tourism_day_visits_transport <- read_csv("../raw_data/tourism_day_visits_transport.csv") %>% clean_names()
+tourism_day_visits_transport_clean<- tourism_day_visits_transport %>% 
+  rename(year = date_code) %>% 
+  rename(area = feature_code) %>% 
+  mutate(area = recode(area, 
+                       "S92000003"= "Scotland"))
+
+tourism_day_visits_transport_clean
+```
+
+Q1
+_What kind of tourism activity generates the highest income for Scotland?_
+
+TOURIST ACTIVITY highest income. There are data from 2013 CHECK THE DATA. Only inter
+
+```{r}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity) %>% 
+  arrange(desc(value))
+  
+```
+_Filter by year_
+```{r}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity) %>% 
+  arrange(desc(year))
+```
+
+ _Filter by year_  between 2019 -2013
+```{r}
+tourism_day_visits_activities %>%
+  select(date_code,units,value,tourism_activity) %>% 
+  filter(date_code == 2015) %>% 
+   arrange(desc(value))
+```
+
+
+Q2 _Which kind of activity generates the most visits to sites?_
+# tourism_day_visits_location_clean + tourism_day_visits_activities_clean = answer question2!!!!!!
+
+
+```{r}
+visit_sites_activity
+```
+
+ Sites visits by activity. Data from 2013 to 2019
+
+
+```{r}
+visit_sites_activity %>%
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  filter(type_of_location_visited != 'NA') %>% 
+  filter(year ==2013) %>% 
+  arrange(year, tourism_activity)
+```
+There is a 'problem' the maths doesnt work for 2013  the 124 million visits 'All areas' is unequal to the sum of different locations. Without filter NA there are a lot of more information = millions visits lost. I show the first one by year and the first one with tourism activity.
+
+
+VISITS
+2019- 59million visit	  City/large town           unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2019-  9	              Seaside resort or town	Day trips/excursions for other leisure purpose   tourism_activity (5th)
+2018- 64	              City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2018- 38	              Small town	            	Went out for a meal  tourism_activity(2nd)
+2017- 70	              City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2017- 21	              Rural countryside		    Shopping for items that you do not regularly buy  tourism_activity(3rd)
+2016- 61                City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2016-  5	              Seaside - beach	        Special personal events e.g. wedding, graduation  tourism_activity(6th)
+2015- 59                City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2015- 11                Village                 Visitor attraction e.g. theme park, museum, zoo  tourism_activity(4th)
+2014- 59 million visit  City/large town         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow (commonwealth games Glasgow)
+2014- 19 million visit  Rural countryside       General day out/ to explore an area  tourism_activity(3rd)
+2013- 59 million visits	City/large town	         unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2013- 18                Rural countryside       Night out to a bar, pub and/or club  tourism_activity(3rd)
+
+
+EXPENDITURE (1st place and 2nd place)
+
+2019- 3400 million pounds (GBP)		City/large town	    unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow         
+2019- 1456	                      Small town          unknown tourism_activity (2nd)
+2018- 3111	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2018- 1234	                      Small town         unknown tourism_activity (2nd)
+2017- 3379	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2017- 1377	                      Small town          unknown tourism_activity (2nd)
+2016- 2630	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2016- 1037	                      Small town          unknown tourism_activity (2nd)
+2015- 2254	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2015-  914	                      Small town          unknown tourism_activity (2nd)
+2014- 2873 	                      City/large town     unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2014- 1398	                      Small town         unknown tourism_activity (2nd)
+2013- 2850	                      City/large town    unknown tourism_activity (1st) Note: It could be Edinburgh/ Glasgow
+2013- 1035	                      Small town          unknown tourism_activity (2nd)
+
+
+Only tourism_activity
+```{r}
+tourism_location_activities %>%
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  filter(type_of_location_visited != 'NA') %>% 
+  filter(tourism_activity != 'NA') %>% 
+  filter(date_code ==2013) %>% 
+  arrange( tourism_activity)
+```
+
+
+
+
+
+
+
+
+Q3 _Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_ 
+(30/12/22)Not yet a clear answer
+
+_Understand the data_
+
+```{r}
+tourism_day_visits_demmographics_clean
+```
+
+
+#  Millions Visits by age.Time range 2013-2019
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =="Visits") %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value))
+```
+
+# Millions visitis by spend
+
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value))
+```
+
+Age or Gender
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  #filter(age != "All") %>% 
+  filter(gender != "All" ) %>% 
+  arrange(desc(value))
+```
+# Marital Status
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  #filter(age != "All") %>% 
+  #filter(gender != "All" ) %>% 
+  filter(marital_status !="All") %>% 
+  arrange(desc(value))
+```
+
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,employment_status) %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  #filter(age != "All") %>% 
+  #filter(gender != "All" ) %>% 
+  #filter(marital_status !="All") %>% 
+  filter(employment_status != "All") %>% 
+  arrange(desc(value))
+```
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,social_grade) %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(social_grade != "All") %>% 
+  arrange(desc(value))
+```
+Funny the most expenditure is the highest grade occupation but the second is in theory the lowest grade occupation ( less money/ less cultured person? assumption)
+
+
+
+Q4 = Q2? _What type of locations receive the most visits? What kinds of locations do people spend the most in?_
+Maybe the issue is not join tables??
+
+
+
+
+Q5 _Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have_
+
+```{r}
+tourism_day_visits_transport_clean
+```
+```{r}
+tourism_day_visits_transport_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Visits') %>% 
+  arrange(desc(value))
+```
+
+```{r}
+tourism_day_visits_transport_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  arrange(desc(value))
+```
+En 2019 el transporte por avion solo trajo poco menos de millon y medio de visitas ( 10 puesto0) pero a cambio trajo 123 (7 puesto). Planes is more to arrive to any airport and later take a hired vehicle , taxi.... so its a way to arrive to scotland more than travel around the country.
+
+How travel people and their expenditure in relation
+
+
+
+
+
+
+
+
+Q6 _When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?_
+
+```{r}
+regional_domestic_tourism_clean
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q7 _What type of accommodation is most popular? Is there a difference by location?_
+
+
+```{r}
+scottish_accomodation_occupancy_clean
+```
+
+```{r}
+scottish_accomodation_occupancy_clean %>% 
+  filter(year == 2019)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q8 _How have general tourism rates changed over time?_
+Q9 _Is there any way to predict spending and visits for Visit Scotland?_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Understand the missing values = 'All' for the variable 'age' (224 from 308 = 72% !)
+
+```{r}
+tourism_day_visits_demmographics %>% 
+  filter(age == 'All') %>% 
+  count()
+```
+
+# Check 'age' groups
+```{r}
+
+tourism_day_visits_demmographics %>% 
+  group_by(age) %>%
+  count()
+```
+
+```{r}
+tourism_day_visits_demmographics %>% 
+  select(date_code,units,value,breakdown_of_domestic_tourism,age,social_grade) %>% 
+  group_by(date_code,age,units) %>% 
+  #filter(units == 'million pounds(GBP)') %>% 
+  arrange(date_code)
+```
+
+Missing where is spent the money?Need another table!!!!!!!!
+
+```{r}
+tourism_day_visits_demmographics %>% 
+  select(date_code,units,value,breakdown_of_domestic_tourism,age,social_grade) %>% 
+  group_by(date_code,age,breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  arrange(date_code)
+```
+
+ There are 348 NA in 'tourism_activity'
+```{r}
+tourism_demographic_location_activities %>% 
+  filter(is.na(tourism_activity)) %>% 
+  count()
+```
+
+
+```{r}
+tourism_demographic_location_activities %>%    
+  select(date_code,units,value,breakdown_of_domestic_tourism,age, tourism_activity,type_of_location_visited) %>% 
+  group_by(date_code,age,breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  arrange(date_code,desc (value))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
