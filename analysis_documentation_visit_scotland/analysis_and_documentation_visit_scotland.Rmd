@@ -140,7 +140,6 @@ In order to answer the second question, we did a full_join of two dataset: "tour
 Is the data complete ? The data is incomplete and it is from 2013 to 2019. 
 
 
-
 There is a 'problem' the maths doesnt work for 2013  the 124 million visits 'All areas' is unequal to the sum of different locations. Without filter NA there are a lot of more information = millions visits lost. I show the first one by year and the first one with tourism activity.
 
 
@@ -189,9 +188,8 @@ EXPENDITURE (1st place and 2nd place) No necessary
 Q3 __THIS ANSWER IS NEED TO CHECK AFTER BACK TO CODECLAN__
 Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_
 
-What is the meaning of 'All' in 'age'? All the groups or Na?  
 
-There is 308 observations in the variable 'age' in the data set 'tourism_day_visits_demmographics' and 204 'All'. Means 308 -224 = 84 observations with any age, very small to do a very accurate estimation about key demographic visitors 
+There is 308 observations in the variable 'age' in the data set 'tourism_day_visits_demmographics' and 204 'All'. Means 308 -224 = 84 observations with any age, very small to do a very accurate estimation about key demographic visitors . VAle chaval estan marcados las edades y all es cuando te miras otra columna, los datos no estan separados tb por edad y sexo o hay sexo o hay edad o grupo marital ......
 
 
 

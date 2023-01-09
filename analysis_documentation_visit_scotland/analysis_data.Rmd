@@ -129,14 +129,14 @@ EXPENDITURE (1st place and 2nd place)
 
 Only tourism_activity
 ```{r}
-tourism_location_activities %>%
+visit_sites_activity %>%
   filter(breakdown_of_domestic_tourism == 'Visits') %>% 
   filter(type_of_location_visited != 'NA') %>% 
   filter(tourism_activity != 'NA') %>% 
-  filter(date_code ==2013) %>% 
+  filter(year== 2013) %>% 
   arrange( tourism_activity)
 ```
-
+Total vale of All "types_of_location_visited" (124) is different to the independent sum of the each value, check what they say in the web. But I think the answer is that one person can visited multiple location. It is the same even you dont filter NA.  
 
 
 
@@ -295,6 +295,13 @@ scottish_accomodation_occupancy_clean %>%
   
 ```
 
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  filter(year == 2019) %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  count(accommodation_type_and_occupancy)
+ 
+```
 
 
 
@@ -316,6 +323,7 @@ scottish_accomodation_occupancy_clean %>%
 
 Q8 _How have general tourism rates changed over time?_
 Q9 _Is there any way to predict spending and visits for Visit Scotland?_
+Predictions with the occupancy
 
 
 
@@ -331,7 +339,7 @@ Q9 _Is there any way to predict spending and visits for Visit Scotland?_
 
 
 
-
+_varios_
 
 
 # Understand the missing values = 'All' for the variable 'age' (224 from 308 = 72% !)
@@ -383,13 +391,23 @@ tourism_demographic_location_activities %>%
   filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
   arrange(date_code,desc (value))
 ```
+_Ejemplos_
+bar_char
+
+Problem, only X
+```{r}
+scottish_accomodation_occupancy_clean %>% 
+  ggplot(aes( x = accommodation_type_and_occupancy))+
+  geom_bar(fill = "light blue", colour = "red")
+```
+```{r}
+scottish_accomodation_occupancy_clean %>% 
+  ggplot(aes( x = accommodation_type_and_occupancy,fill = year), position = 'dodge')+
+  geom_bar()
+```
 
 
-
-
-
-
-
+geom_col ahora si hay x e y
 
 
 
