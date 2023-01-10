@@ -11,14 +11,6 @@ library(janitor)
 regional_domestic_tourism_clean
 ```
 
-
-```{r}
-regional_domestic_tourism_clean %>% 
-  filter(region_of_residence != 'Scotland') %>% 
-  arrange(desc(year))
-```
-
-
 ```{r}
 scottish_accomodation_occupancy_clean
 ```
@@ -33,10 +25,10 @@ tourism_day_visits_demmographics_clean
 ```
 
 
-
 ```{r}
 tourism_day_visits_location_clean
 ```
+
 
 ```{r}
 tourism_day_visits_transport_clean
@@ -59,6 +51,7 @@ _Filter by year_
 ```{r}
 tourism_day_visits_activities_clean %>%
   select(year,units,value,tourism_activity) %>% 
+  filter(year == 2019) %>% 
   arrange(desc(year))
 ```
 
@@ -71,9 +64,310 @@ tourism_day_visits_activities %>%
 ```
 
 
-Q2 _Which kind of activity generates the most visits to sites?_
-# tourism_day_visits_location_clean + tourism_day_visits_activities_clean = answer question2!!!!!!
+ Q2 _Which kind of activity generates the most visits to sites?_
+ 
+```{r}
+tourism_day_visits_location_clean
+```
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Visits') %>% 
+  filter(year == 2014) %>% 
+   arrange(desc(value))
+```
+ 
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(year == 2014) %>% 
+   arrange(desc(value))
+```
 
+It can be observed   that for the year 2019  visits and expenditure are correlated except for the values Village/Rural countryside. In happens as well in the year 2018, 2014
+
+
+
+Q8 _How have general tourism rates changed over time?_
+Q9 _Is there any way to predict spending and visits for Visit Scotland?_
+Predictions with the occupancy. As it was mentioned before the data covers mostly the period 2013- 2019. There are few problems to do a prediction. First, the most important is that we are in 2023 and in 2020 the methodology "substantial changes were introduced as part of a new combined online survey method collecting data on both domestic overnight trips as well as domestic day trips". This could imply different interpretations and results in Nights, Visits and Expenditure. The second , the china's present and pandemic and lockdown follow for a worldwide economic recession and the consequences after the invasion of Ukraine.
+
+
+_varios_
+
+
+# Understand the missing values = 'All' for the variable 'age' (224 from 308 = 72% !)
+
+```{r}
+tourism_day_visits_demmographics %>% 
+  filter(age == 'All') %>% 
+  count()
+```
+
+# Check 'age' groups
+```{r}
+
+tourism_day_visits_demmographics %>% 
+  group_by(age) %>%
+  count()
+```
+
+```{r}
+tourism_day_visits_demmographics %>% 
+  select(date_code,units,value,breakdown_of_domestic_tourism,age,social_grade) %>% 
+  group_by(date_code,age,units) %>% 
+  #filter(units == 'million pounds(GBP)') %>% 
+  arrange(date_code)
+```
+
+Missing where is spent the money?Need another table!!!!!!!!
+
+```{r}
+tourism_day_visits_demmographics %>% 
+  select(date_code,units,value,breakdown_of_domestic_tourism,age,social_grade) %>% 
+  group_by(date_code,age,breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  arrange(date_code)
+```
+
+```{r}
+tourism_demographic_location_activities %>%    
+  select(year,units,value,breakdown_of_domestic_tourism,age, tourism_activity,type_of_location_visited) %>% 
+  group_by(year,age,breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  arrange(year,desc (value))
+```
+_Ejemplos_
+bar_char
+
+Problem, only X
+```{r}
+scottish_accomodation_occupancy_clean %>% 
+  ggplot(aes( x = accommodation_type_and_occupancy))+
+  geom_bar(fill = "light blue", colour = "red")
+```
+
+```{r}
+scottish_accomodation_occupancy_clean %>% 
+  ggplot(aes( x = accommodation_type_and_occupancy,fill = year), position = 'dodge')+
+  geom_bar()
+
+```
+
+
+geom_col ahora si hay x e y
+                     _ANSWWERS_
+                     
+                     
+Definition of a tourism activity:
+
+Q1 Value of the tourism for Scotland
+```{r}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity) %>% 
+  filter(tourism_activity == 'All') %>% 
+  filter(units == 'million pounds (GBP)') %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = year, y = value))+
+  geom_col(fill = "light blue", colour = "purple", position = 'dodge')+
+  labs(title =  'Value of the GB tourism for Scotland', subtitle = '2013 -2019 Income', x = 'Year', y = 'million pounds' )+
+  scale_x_continuous(breaks = 2013:2019)
+```
+
+Q1. Higest income for Scotland in 2019
+
+```{r}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity) %>%
+  filter(tourism_activity != 'All') %>% 
+  filter(year == 2019) %>% 
+  arrange(desc(year)) %>% 
+   ggplot(aes( x =reorder(tourism_activity,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = '2019 Highest income' )+
+  xlab('tourism activity' )+
+  ylab('million pounds' )+
+  coord_flip()
+ 
+```
+
+
+
+
+Q2 _Which kind of activity generates the most visits to sites?_
+
+First. where go people and where they spend their money
+
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(year == 2019) %>% 
+   arrange(desc(value))
+```
+
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(type_of_location_visited != 'All areas') %>% 
+  filter(year == 2019) %>% 
+   arrange(desc(value)) %>% 
+  ggplot(aes( x =reorder(type_of_location_visited,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = 'GB Visits in 2019' )+
+  xlab('Location Visited' )+
+  ylab('million visit' )+
+  coord_flip()
+  
+```
+ 
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Visits') %>% 
+  filter(type_of_location_visited != 'All areas') %>% 
+  filter(year == 2019) %>% 
+   arrange(desc(value)) %>% 
+  ggplot(aes( x =reorder(type_of_location_visited,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = 'GB Expenditure in 2019' )+
+  xlab('Location Visited' )+
+  ylab('million pounds' )+
+  coord_flip()
+```
+ 
+ From 2013 to 2019
+ 
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(type_of_location_visited != 'All areas') %>% 
+   ggplot(aes( x = year, y = value, colour = type_of_location_visited))+
+  geom_line() +
+  facet_wrap(~type_of_location_visited, scales = 'free_y')+
+labs(
+    title = "GB Visits in Scotland between 2013 -2019",
+    x = "\nyear",
+    y = "millions visits\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Visits') %>% 
+  filter(type_of_location_visited != 'All areas') %>% 
+   ggplot(aes( x = year, y = value, colour = type_of_location_visited))+
+  geom_line() +
+  facet_wrap(~type_of_location_visited, scales = 'free_y')+
+labs(
+    title = "GB Expenditure in Scotland between 2013 -2019",
+    x = "\nyear",
+    y = "Value\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+Q3 _Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_
+
+
+```{r}
+tourism_day_visits_demmographics_clean
+```
+
+
+#  Millions Visits by age.Time range 2013-2019 More visits people under 24.
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =="Visits") %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value))
+```
+
+# Millions Expenditure by visitors age. More spend people between 25-34 , 55-56 and 35-44.
+
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value))
+```
+
+Age or Gender. More Female than Male 
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  #filter(age != "All") %>% 
+  filter(gender != "All" ) %>% 
+  arrange(desc(value))
+```
+# Marital Status
+ And much more married than not married.
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  #filter(age != "All") %>% 
+  #filter(gender != "All" ) %>% 
+  filter(marital_status !="All") %>% 
+  arrange(desc(value))
+```
+# Childrens? NO! very interesting! 
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  #filter(age != "All") %>% 
+  #filter(gender != "All" ) %>% 
+  filter(children !="All") %>% 
+  arrange(desc(value))
+```
+
+# Millions Expenditure by employment_status.
+The gross part is, obviously, spend by employed / self-employed persons. We can questioning about the consequences about the fact that 715 millions are spend by unemployed or not working people, maybe this total amount is the reflection of students plus retired people. Segun los datos hay 998 millones que no se saben donde estan o que no han respondido
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,employment_status) %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  #filter(age != "All") %>% 
+  #filter(gender != "All" ) %>% 
+  #filter(marital_status !="All") %>% 
+  filter(employment_status != "All") %>% 
+  arrange(desc(value))
+```
+Is important the social grade? Is ethical?Funny the most expenditure is the highest grade occupation but the second is in theory the lowest grade occupation ( less money/ less cultured person? assumption)
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,social_grade) %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(social_grade != "All") %>% 
+  arrange(desc(value))
+```
+Answer. so young couples, maybe more females  with good salaries and no children
+
+
+Q4 _What type of locations receive the most visits? What kinds of locations do people spend the most in?_ 
+# tourism_day_visits_location_clean + tourism_day_visits_activities_clean = answer question2!!!!!!
 
 ```{r}
 visit_sites_activity
@@ -139,96 +433,11 @@ visit_sites_activity %>%
 Total vale of All "types_of_location_visited" (124) is different to the independent sum of the each value, check what they say in the web. But I think the answer is that one person can visited multiple location. It is the same even you dont filter NA.  
 
 
-
-
-
-
-
-Q3 _Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_ 
-(30/12/22)Not yet a clear answer
-
-_Understand the data_
-
-```{r}
-tourism_day_visits_demmographics_clean
-```
-
-
-#  Millions Visits by age.Time range 2013-2019
-
-```{r}
-tourism_day_visits_demmographics_clean %>% 
-  filter(year == 2019) %>% 
-  filter(breakdown_of_domestic_tourism =="Visits") %>% 
-  filter(age != "All") %>% 
-  arrange(desc(value))
-```
-
-# Millions visitis by spend
-
-
-```{r}
-tourism_day_visits_demmographics_clean %>% 
-  filter(year == 2019) %>% 
-  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  filter(age != "All") %>% 
-  arrange(desc(value))
-```
-
-Age or Gender
-
-```{r}
-tourism_day_visits_demmographics_clean %>% 
-  filter(year == 2019) %>% 
-  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  #filter(age != "All") %>% 
-  filter(gender != "All" ) %>% 
-  arrange(desc(value))
-```
-# Marital Status
-
-```{r}
-tourism_day_visits_demmographics_clean %>% 
-  filter(year == 2019) %>% 
-  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  #filter(age != "All") %>% 
-  #filter(gender != "All" ) %>% 
-  filter(marital_status !="All") %>% 
-  arrange(desc(value))
-```
-
-
-```{r}
-tourism_day_visits_demmographics_clean %>% 
-  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,employment_status) %>% 
-  filter(year == 2019) %>% 
-  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  #filter(age != "All") %>% 
-  #filter(gender != "All" ) %>% 
-  #filter(marital_status !="All") %>% 
-  filter(employment_status != "All") %>% 
-  arrange(desc(value))
-```
-
-```{r}
-tourism_day_visits_demmographics_clean %>% 
-  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,social_grade) %>% 
-  filter(year == 2019) %>% 
-  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  filter(social_grade != "All") %>% 
-  arrange(desc(value))
-```
-Funny the most expenditure is the highest grade occupation but the second is in theory the lowest grade occupation ( less money/ less cultured person? assumption)
-
-
-
-Q4 = Q2? _What type of locations receive the most visits? What kinds of locations do people spend the most in?_
-Maybe the issue is not join tables??
-
-
-
-
 Q5 _Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have_
+
+  In my opinion the data mix to important questions how they arrive to Scotland and how they move around Scotland.
+ As we data only cover GB (England, Scotland, Wales). Which scottish airport has conections with the rest of the Island? At least, Edinburgh and Glasgow have.Travels by plane can take a taxi, car hire or tram (edinburgh) some questions have multiple answers. One visitor/visitors can use different method travel, arrive to  an airport city like Edinburgh by plane, go to accommodation by taxi,regular bus or Tram and later walk around the city.
+Maybe the train is used for move between large/ medium cities  and car  for small and rural. 
 
 ```{r}
 tourism_day_visits_transport_clean
@@ -240,45 +449,146 @@ tourism_day_visits_transport_clean %>%
   arrange(desc(value))
 ```
 
+There are feew things interesting, 0.5 million visitis arrive by see(boat/ship/ ferry) where is cruise is boat a cruise? ship and ferry can include go to the Islands? only 0.4 take a caravan or campervan but the value of their spend is 24.2 millions of pounds 
+
+
+```{r}
+tourism_day_visits_transport_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Visits') %>% 
+  filter(method_of_travel != 'All') %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes(x =reorder(method_of_travel,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = 'GB Travel Visits in 2019' )+
+  xlab('Method of travel' )+
+  ylab('million visit' )+
+  coord_flip()
+
+
+```
+
+
 ```{r}
 tourism_day_visits_transport_clean %>% 
   filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  arrange(desc(value))
+   filter(method_of_travel != 'All') %>%
+  arrange(desc(value)) %>% 
+  ggplot(aes(x =reorder(method_of_travel,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = 'GB Expenses By Travel Method in 2019' )+
+  xlab('Method of travel' )+
+  ylab('million pounds' )+
+  coord_flip()
 ```
-En 2019 el transporte por avion solo trajo poco menos de millon y medio de visitas ( 10 puesto0) pero a cambio trajo 123 (7 puesto). Planes is more to arrive to any airport and later take a hired vehicle , taxi.... so its a way to arrive to scotland more than travel around the country.
+
+En 2019 el transporte por avion solo trajo poco menos de millon y medio de visitas ( 10 puesto0) pero a cambio trajo 123 millones de  libras(7 puesto). Planes is more to arrive to any airport and later take a hired vehicle , taxi.... so its a way to arrive to scotland more than travel around the country.
 
 How travel people and their expenditure in relation
-
-
-
-
-
-
-
 
 Q6 _When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?_
 
 ```{r}
 regional_domestic_tourism_clean
 ```
+Issues : the year is an average of 3 years , All GB means England, Scotland and Wales. But its only, Scotland and England in observations but not Wales and its difficult to substract  this country from 'All GB'
+
+I am not interested!!!!!!
+```{r}
+regional_domestic_tourism_clean %>% 
+  group_by(breakdown_of_domestic_tourism) %>% 
+  count()
+```
+```{r}
+regional_domestic_tourism_clean %>% 
+  select( area ,year, value, units,region_of_residence,breakdown_of_domestic_tourism ) %>% 
+  group_by(year) %>% 
+  filter(region_of_residence == 'All of GB') %>% 
+  filter(breakdown_of_domestic_tourism == 'Nights')
+  
+```
+
+```{r}
+regional_domestic_tourism_clean %>% 
+  select( area ,year, value, units,region_of_residence,breakdown_of_domestic_tourism ) %>% 
+  group_by(year) %>% 
+  filter(region_of_residence == 'England') %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  arrange(year)
+```
 
 
 
+```{r}
+regional_domestic_tourism_clean %>% 
+  select( area ,year, value, units,region_of_residence,breakdown_of_domestic_tourism ) %>% 
+  filter(year == '2017-2019') %>% 
+  filter(region_of_residence == 'All of GB') %>% 
+  filter(area != 'Scotland') %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  arrange(desc(value))
+```
+
+Unfortunately no works a Data viz with geom_point to many areas
+
+```{r}
+regional_domestic_tourism_clean %>% 
+  select( area ,year, value, units,region_of_residence,breakdown_of_domestic_tourism ) %>% 
+ #group_by(area) %>% 
+  filter(year == '2017-2019') %>% 
+  filter(region_of_residence == 'All of GB') %>% 
+  filter(area != 'Scotland') %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  arrange(desc(value)) %>% 
+   ggplot(aes(x =reorder(area,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = 'GB Expenses By Regions during period 2017- 2019' )+
+  xlab('Scottish Region' )+
+  ylab('million pounds' )+
+  coord_flip()
+  
+```
+What could we deduce? it is not how to arrive, the west Hebridies ( Na h-Elleanan Siar) is over regions of the 'Central bell' it is the offer fro activities
 
 
+```{r}
+regional_domestic_tourism_clean %>% 
+  select( area ,year, value, units,region_of_residence,breakdown_of_domestic_tourism ) %>% 
+  filter(year == '2017-2019') %>% 
+  filter(region_of_residence == 'All of GB') %>% 
+  filter(area != 'Scotland') %>% 
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  arrange(desc(value)) %>% 
+   ggplot(aes(x =reorder(area,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = 'GB Visits By Regions during period 2017- 2019' )+
+  xlab('Scottish Region' )+
+  ylab('Thousand visits' )+
+  coord_flip()
+```
 
-
-
-
-
-
-
-
-
-
-
-
+```{r}
+regional_domestic_tourism_clean %>% 
+  select( area ,year, value, units,region_of_residence,breakdown_of_domestic_tourism ) %>% 
+  filter(year == '2017-2019') %>% 
+  filter(region_of_residence == 'All of GB') %>% 
+  filter(area != 'Scotland') %>% 
+  filter(breakdown_of_domestic_tourism == 'Nights') %>% 
+  arrange(desc(value)) %>% 
+   ggplot(aes(x =reorder(area,value), y = value))+
+  geom_col(fill = "light blue", #colour = "purple",
+           position = 'dodge')+
+  labs(title = 'GB Nights By Regions during period 2017- 2019' )+
+  xlab('Scottish Region' )+
+  ylab('Thousand Nights' )+
+  coord_flip()
+```
+The nights are possible related to what can you do there? The offer, obviously for Highland or the big cities is more than for areas like the ' central bell' where the normal should be to stay in edinburgh/Glasgow and from there travel and back at the same day.
 
 
 Q7 _What type of accommodation is most popular? Is there a difference by location?_
@@ -316,98 +626,6 @@ scottish_accomodation_occupancy_clean %>%
 
 
 
-
-
-
-
-
-Q8 _How have general tourism rates changed over time?_
-Q9 _Is there any way to predict spending and visits for Visit Scotland?_
-Predictions with the occupancy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-_varios_
-
-
-# Understand the missing values = 'All' for the variable 'age' (224 from 308 = 72% !)
-
-```{r}
-tourism_day_visits_demmographics %>% 
-  filter(age == 'All') %>% 
-  count()
-```
-
-# Check 'age' groups
-```{r}
-
-tourism_day_visits_demmographics %>% 
-  group_by(age) %>%
-  count()
-```
-
-```{r}
-tourism_day_visits_demmographics %>% 
-  select(date_code,units,value,breakdown_of_domestic_tourism,age,social_grade) %>% 
-  group_by(date_code,age,units) %>% 
-  #filter(units == 'million pounds(GBP)') %>% 
-  arrange(date_code)
-```
-
-Missing where is spent the money?Need another table!!!!!!!!
-
-```{r}
-tourism_day_visits_demmographics %>% 
-  select(date_code,units,value,breakdown_of_domestic_tourism,age,social_grade) %>% 
-  group_by(date_code,age,breakdown_of_domestic_tourism) %>% 
-  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
-  arrange(date_code)
-```
-
- There are 348 NA in 'tourism_activity'
-```{r}
-tourism_demographic_location_activities %>% 
-  filter(is.na(tourism_activity)) %>% 
-  count()
-```
-
-
-```{r}
-tourism_demographic_location_activities %>%    
-  select(date_code,units,value,breakdown_of_domestic_tourism,age, tourism_activity,type_of_location_visited) %>% 
-  group_by(date_code,age,breakdown_of_domestic_tourism) %>% 
-  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
-  arrange(date_code,desc (value))
-```
-_Ejemplos_
-bar_char
-
-Problem, only X
-```{r}
-scottish_accomodation_occupancy_clean %>% 
-  ggplot(aes( x = accommodation_type_and_occupancy))+
-  geom_bar(fill = "light blue", colour = "red")
-```
-```{r}
-scottish_accomodation_occupancy_clean %>% 
-  ggplot(aes( x = accommodation_type_and_occupancy,fill = year), position = 'dodge')+
-  geom_bar()
-```
-
-
-geom_col ahora si hay x e y
 
 
 

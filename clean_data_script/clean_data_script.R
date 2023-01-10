@@ -99,7 +99,7 @@ write_csv(tourism_day_visits_location_clean,"clean_data/tourism_day_visits_locat
 
 #tourism_day_visits_transportation
 
-tourism_day_visits_transport <- read_csv("raw_data/tourism_day_visits_location.csv") %>% clean_names()
+tourism_day_visits_transport <- read_csv("raw_data/tourism_day_visits_transport.csv") %>% clean_names()
 
 tourism_day_visits_transport_clean<- tourism_day_visits_transport %>% 
   rename(year = date_code) %>% 
@@ -124,9 +124,11 @@ visit_sites_activity <- full_join(tourism_day_visits_location_clean, tourism_day
 
 write_csv(visit_sites_activity,"clean_data/visit_sites_activity.csv")
 
-# To answer some questions is needed/ interesting to have a new dataset with tourism_location_activities + demographics
+# To answer some questions is -likely/ possibly- needed/ interesting to have a new dataset with tourism_location_activities + demographics.
 
-tourism_demographic_location_activities <- full_join(tourism_day_visits_demmographics,tourism_location_activities)
+tourism_demographic_location_activities <- full_join(tourism_day_visits_demmographics_clean,visit_sites_activity)
+
+write_csv(tourism_demographic_location_activities,"clean_data/tourism_demographic_location_activities.csv")
 
 
 

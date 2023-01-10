@@ -1,113 +1,237 @@
-area,year,measurement,units,value,type_of_location_visited,breakdown_of_domestic_tourism
-Scotland,2014,Count,million pounds (GBP),186,Seaside - beach,Expenditure
-Scotland,2019,Count,million pounds (GBP),1456,Small town,Expenditure
-Scotland,2016,Count,million pounds (GBP),4916,All areas,Expenditure
-Scotland,2018,Count,million pounds (GBP),5474,All areas,Expenditure
-Scotland,2013,Count,million pounds (GBP),217,Seaside - beach,Expenditure
-Scotland,2018,Count,million pounds (GBP),6,Seaside - other,Expenditure
-Scotland,2018,Count,million pounds (GBP),1234,Small town,Expenditure
-Scotland,2015,Count,million pounds (GBP),230,Seaside resort or town,Expenditure
-Scotland,2016,Count,million pounds (GBP),302,Seaside resort or town,Expenditure
-Scotland,2019,Count,million pounds (GBP),359,Seaside resort or town,Expenditure
-Scotland,2017,Count,million pounds (GBP),458,Seaside resort or town,Expenditure
-Scotland,2015,Count,million pounds (GBP),3922,All areas,Expenditure
-Scotland,2014,Count,million pounds (GBP),5020,All areas,Expenditure
-Scotland,2013,Count,million pounds (GBP),4647,All areas,Expenditure
-Scotland,2016,Count,million pounds (GBP),1037,Small town,Expenditure
-Scotland,2013,Count,million pounds (GBP),68,Seaside - other,Expenditure
-Scotland,2013,Count,million pounds (GBP),1035,Small town,Expenditure
-Scotland,2017,Count,million pounds (GBP),246,Seaside - beach,Expenditure
-Scotland,2019,Count,million pounds (GBP),35,Seaside - other,Expenditure
-Scotland,2015,Count,million pounds (GBP),914,Small town,Expenditure
-Scotland,2016,Count,million pounds (GBP),32,Seaside - other,Expenditure
-Scotland,2016,Count,million pounds (GBP),249,Seaside - beach,Expenditure
-Scotland,2015,Count,million pounds (GBP),36,Seaside - other,Expenditure
-Scotland,2014,Count,million pounds (GBP),128,Seaside - other,Expenditure
-Scotland,2017,Count,million pounds (GBP),75,Seaside - other,Expenditure
-Scotland,2015,Count,million pounds (GBP),81,Seaside - beach,Expenditure
-Scotland,2019,Count,million pounds (GBP),237,Seaside - beach,Expenditure
-Scotland,2018,Count,million pounds (GBP),151,Seaside - beach,Expenditure
-Scotland,2019,Count,million pounds (GBP),457,Village,Expenditure
-Scotland,2015,Count,million pounds (GBP),308,Village,Expenditure
-Scotland,2019,Count,million pounds (GBP),3400,City/large town,Expenditure
-Scotland,2018,Count,million pounds (GBP),3111,City/large town,Expenditure
-Scotland,2017,Count,million pounds (GBP),1377,Small town,Expenditure
-Scotland,2017,Count,million pounds (GBP),883,Village,Expenditure
-Scotland,2014,Count,million pounds (GBP),1398,Small town,Expenditure
-Scotland,2014,Count,million pounds (GBP),2873,City/large town,Expenditure
-Scotland,2015,Count,million pounds (GBP),2254,City/large town,Expenditure
-Scotland,2017,Count,million pounds (GBP),3379,City/large town,Expenditure
-Scotland,2016,Count,million pounds (GBP),2630,City/large town,Expenditure
-Scotland,2014,Count,million pounds (GBP),286,Seaside resort or town,Expenditure
-Scotland,2013,Count,million pounds (GBP),2850,City/large town,Expenditure
-Scotland,2013,Count,million pounds (GBP),206,Seaside resort or town,Expenditure
-Scotland,2017,Count,million pounds (GBP),778,Rural countryside,Expenditure
-Scotland,2016,Count,million pounds (GBP),520,Rural countryside,Expenditure
-Scotland,2017,Count,million pounds (GBP),5995,All areas,Expenditure
-Scotland,2019,Count,million pounds (GBP),429,Rural countryside,Expenditure
-Scotland,2015,Count,million pounds (GBP),402,Rural countryside,Expenditure
-Scotland,2018,Count,million pounds (GBP),228,Seaside resort or town,Expenditure
-Scotland,2018,Count,million pounds (GBP),502,Rural countryside,Expenditure
-Scotland,2016,Count,million pounds (GBP),482,Village,Expenditure
-Scotland,2014,Count,million pounds (GBP),510,Village,Expenditure
-Scotland,2018,Count,million pounds (GBP),651,Village,Expenditure
-Scotland,2013,Count,million pounds (GBP),483,Village,Expenditure
-Scotland,2014,Count,million pounds (GBP),612,Rural countryside,Expenditure
-Scotland,2019,Count,million pounds (GBP),5777,All areas,Expenditure
-Scotland,2013,Count,million pounds (GBP),545,Rural countryside,Expenditure
-Scotland,2013,Count,Million Visits,33,Small town,Visits
-Scotland,2016,Count,Million Visits,17,Village,Visits
-Scotland,2015,Count,Million Visits,32,Small town,Visits
-Scotland,2013,Count,Million Visits,15,Village,Visits
-Scotland,2014,Count,Million Visits,4,Seaside - beach,Visits
-Scotland,2016,Count,Million Visits,5,Seaside - beach,Visits
-Scotland,2018,Count,Million Visits,16,Village,Visits
-Scotland,2014,Count,Million Visits,12,Village,Visits
-Scotland,2017,Count,Million Visits,19,Village,Visits
-Scotland,2017,Count,Million Visits,70,City/large town,Visits
-Scotland,2019,Count,Million Visits,7,Seaside - beach,Visits
-Scotland,2019,Count,Million Visits,16,Village,Visits
-Scotland,2014,Count,Million Visits,35,Small town,Visits
-Scotland,2018,Count,Million Visits,38,Small town,Visits
-Scotland,2013,Count,Million Visits,59,City/large town,Visits
-Scotland,2018,Count,Million Visits,64,City/large town,Visits
-Scotland,2016,Count,Million Visits,61,City/large town,Visits
-Scotland,2015,Count,Million Visits,59,City/large town,Visits
-Scotland,2017,Count,Million Visits,8,Seaside - beach,Visits
-Scotland,2019,Count,Million Visits,59,City/large town,Visits
-Scotland,2015,Count,Million Visits,4,Seaside - beach,Visits
-Scotland,2016,Count,Million Visits,7,Seaside resort or town,Visits
-Scotland,2015,Count,Million Visits,8,Seaside resort or town,Visits
-Scotland,2018,Count,Million Visits,5,Seaside - beach,Visits
-Scotland,2019,Count,Million Visits,9,Seaside resort or town,Visits
-Scotland,2013,Count,Million Visits,8,Seaside resort or town,Visits
-Scotland,2014,Count,Million Visits,59,City/large town,Visits
-Scotland,2014,Count,Million Visits,8,Seaside resort or town,Visits
-Scotland,2018,Count,Million Visits,17,Rural countryside,Visits
-Scotland,2014,Count,Million Visits,19,Rural countryside,Visits
-Scotland,2013,Count,Million Visits,124,All areas,Visits
-Scotland,2017,Count,Million Visits,21,Rural countryside,Visits
-Scotland,2016,Count,Million Visits,22,Rural countryside,Visits
-Scotland,2019,Count,Million Visits,19,Rural countryside,Visits
-Scotland,2014,Count,Million Visits,2,Seaside - other,Visits
-Scotland,2017,Count,Million Visits,9,Seaside resort or town,Visits
-Scotland,2018,Count,Million Visits,8,Seaside resort or town,Visits
-Scotland,2014,Count,Million Visits,127,All areas,Visits
-Scotland,2015,Count,Million Visits,124,All areas,Visits
-Scotland,2013,Count,Million Visits,4,Seaside - beach,Visits
-Scotland,2016,Count,Million Visits,142,All areas,Visits
-Scotland,2016,Count,Million Visits,2,Seaside - other,Visits
-Scotland,2017,Count,Million Visits,2,Seaside - other,Visits
-Scotland,2015,Count,Million Visits,11,Village,Visits
-Scotland,2013,Count,Million Visits,18,Rural countryside,Visits
-Scotland,2015,Count,Million Visits,17,Rural countryside,Visits
-Scotland,2016,Count,Million Visits,39,Small town,Visits
-Scotland,2017,Count,Million Visits,40,Small town,Visits
-Scotland,2019,Count,Million Visits,37,Small town,Visits
-Scotland,2019,Count,Million Visits,134,All areas,Visits
-Scotland,2018,Count,Million Visits,2,Seaside - other,Visits
-Scotland,2019,Count,Million Visits,1,Seaside - other,Visits
-Scotland,2015,Count,Million Visits,2,Seaside - other,Visits
-Scotland,2018,Count,Million Visits,138,All areas,Visits
-Scotland,2013,Count,Million Visits,3,Seaside - other,Visits
-Scotland,2017,Count,Million Visits,151,All areas,Visits
+area,year,measurement,units,value,method_of_travel,breakdown_of_domestic_tourism
+Scotland,2018,Count,million pounds (GBP),251.8,Walked,Expenditure
+Scotland,2018,Count,million pounds (GBP),1.8,Caravan/Campervan,Expenditure
+Scotland,2014,Count,million pounds (GBP),97.8,Walked,Expenditure
+Scotland,2017,Count,million pounds (GBP),168.8,Walked,Expenditure
+Scotland,2018,Count,million pounds (GBP),193.1,Plane,Expenditure
+Scotland,2015,Count,million pounds (GBP),89.4,Plane,Expenditure
+Scotland,2013,Count,million pounds (GBP),36.7,Plane,Expenditure
+Scotland,2016,Count,million pounds (GBP),8.3,Plane,Expenditure
+Scotland,2019,Count,million pounds (GBP),205.8,Walked,Expenditure
+Scotland,2014,Count,million pounds (GBP),21.8,Boat/Ship/Ferry,Expenditure
+Scotland,2016,Count,million pounds (GBP),135.3,Walked,Expenditure
+Scotland,2019,Count,million pounds (GBP),417.2,Bus or Coach - Regular,Expenditure
+Scotland,2015,Count,million pounds (GBP),117.2,Walked,Expenditure
+Scotland,2013,Count,million pounds (GBP),154.9,Walked,Expenditure
+Scotland,2015,Count,million pounds (GBP),385.4,Bus or Coach - Regular,Expenditure
+Scotland,2014,Count,million pounds (GBP),907.4,Train,Expenditure
+Scotland,2018,Count,million pounds (GBP),192.4,Taxi,Expenditure
+Scotland,2014,Count,million pounds (GBP),219.9,Taxi,Expenditure
+Scotland,2015,Count,million pounds (GBP),96.1,Taxi,Expenditure
+Scotland,2014,Count,million pounds (GBP),38.2,Plane,Expenditure
+Scotland,2013,Count,million pounds (GBP),163.8,Taxi,Expenditure
+Scotland,2019,Count,million pounds (GBP),123.5,Plane,Expenditure
+Scotland,2019,Count,million pounds (GBP),224.4,Taxi,Expenditure
+Scotland,2016,Count,million pounds (GBP),8.6,Bicycle,Expenditure
+Scotland,2013,Count,million pounds (GBP),3.4,Bicycle,Expenditure
+Scotland,2017,Count,million pounds (GBP),114.7,Plane,Expenditure
+Scotland,2018,Count,million pounds (GBP),12.8,Bicycle,Expenditure
+Scotland,2019,Count,million pounds (GBP),15.5,Bicycle,Expenditure
+Scotland,2016,Count,million pounds (GBP),277.5,Taxi,Expenditure
+Scotland,2017,Count,million pounds (GBP),28.6,Bicycle,Expenditure
+Scotland,2017,Count,million pounds (GBP),27.8,Boat/Ship/Ferry,Expenditure
+Scotland,2018,Count,million pounds (GBP),452.2,Bus or Coach - Regular,Expenditure
+Scotland,2014,Count,million pounds (GBP),8.4,Bus or Coach - Minibus,Expenditure
+Scotland,2018,Count,million pounds (GBP),2.1,Lorry/Truck/Van,Expenditure
+Scotland,2018,Count,million pounds (GBP),2.1,Boat/Ship/Ferry,Expenditure
+Scotland,2013,Count,million pounds (GBP),12.2,Boat/Ship/Ferry,Expenditure
+Scotland,2013,Count,million pounds (GBP),629.5,Bus or Coach - Regular,Expenditure
+Scotland,2015,Count,million pounds (GBP),16.1,Boat/Ship/Ferry,Expenditure
+Scotland,2014,Count,million pounds (GBP),677.3,Bus or Coach - Regular,Expenditure
+Scotland,2016,Count,million pounds (GBP),2.4,Boat/Ship/Ferry,Expenditure
+Scotland,2019,Count,million pounds (GBP),27.7,Boat/Ship/Ferry,Expenditure
+Scotland,2016,Count,million pounds (GBP),414.7,Bus or Coach - Regular,Expenditure
+Scotland,2013,Count,million pounds (GBP),2.9,Bus or Coach - Minibus,Expenditure
+Scotland,2016,Count,million pounds (GBP),4.3,Lorry/Truck/Van,Expenditure
+Scotland,2015,Count,million pounds (GBP),27.6,Bus or Coach - Minibus,Expenditure
+Scotland,2017,Count,million pounds (GBP),10.7,Caravan/Campervan,Expenditure
+Scotland,2019,Count,million pounds (GBP),24.2,Caravan/Campervan,Expenditure
+Scotland,2019,Count,million pounds (GBP),114.8,Bus or Coach - Organised Tour,Expenditure
+Scotland,2018,Count,million pounds (GBP),13.3,Bus or Coach - Organised Tour,Expenditure
+Scotland,2015,Count,million pounds (GBP),73.8,Bus or Coach - Organised Tour,Expenditure
+Scotland,2017,Count,million pounds (GBP),435.9,Bus or Coach - Regular,Expenditure
+Scotland,2013,Count,million pounds (GBP),104.8,Bus or Coach - Organised Tour,Expenditure
+Scotland,2014,Count,million pounds (GBP),27.5,Caravan/Campervan,Expenditure
+Scotland,2016,Count,million pounds (GBP),38.1,Caravan/Campervan,Expenditure
+Scotland,2015,Count,million pounds (GBP),11.8,Caravan/Campervan,Expenditure
+Scotland,2017,Count,million pounds (GBP),106.4,Bus or Coach - Organised Tour,Expenditure
+Scotland,2013,Count,million pounds (GBP),5.1,Caravan/Campervan,Expenditure
+Scotland,2016,Count,million pounds (GBP),59.2,Bus or Coach - Organised Tour,Expenditure
+Scotland,2014,Count,million pounds (GBP),16.2,Bus or Coach - Organised Tour,Expenditure
+Scotland,2014,Count,million pounds (GBP),3.5,Other,Expenditure
+Scotland,2015,Count,million pounds (GBP),9.5,Other,Expenditure
+Scotland,2017,Count,million pounds (GBP),46.7,Other,Expenditure
+Scotland,2019,Count,million pounds (GBP),30.7,Other,Expenditure
+Scotland,2016,Count,million pounds (GBP),762.8,Train,Expenditure
+Scotland,2017,Count,million pounds (GBP),10.4,Tube,Expenditure
+Scotland,2018,Count,million pounds (GBP),4.3,Tube,Expenditure
+Scotland,2013,Count,million pounds (GBP),40.8,Tube,Expenditure
+Scotland,2013,Count,million pounds (GBP),0.4,Lorry/Truck/Van,Expenditure
+Scotland,2017,Count,million pounds (GBP),9.7,Lorry/Truck/Van,Expenditure
+Scotland,2016,Count,million pounds (GBP),4916.1,All,Expenditure
+Scotland,2015,Count,million pounds (GBP),4.3,Lorry/Truck/Van,Expenditure
+Scotland,2019,Count,million pounds (GBP),6.5,Lorry/Truck/Van,Expenditure
+Scotland,2016,Count,million pounds (GBP),21.4,Other,Expenditure
+Scotland,2014,Count,million pounds (GBP),0.2,Lorry/Truck/Van,Expenditure
+Scotland,2018,Count,million pounds (GBP),131.9,Car - hired,Expenditure
+Scotland,2017,Count,million pounds (GBP),254.1,Car - hired,Expenditure
+Scotland,2019,Count,million pounds (GBP),138.9,Car - hired,Expenditure
+Scotland,2015,Count,million pounds (GBP),46,Car - hired,Expenditure
+Scotland,2013,Count,million pounds (GBP),31.4,Car - hired,Expenditure
+Scotland,2015,Count,million pounds (GBP),0.9,Tube,Expenditure
+Scotland,2014,Count,million pounds (GBP),5.3,Tube,Expenditure
+Scotland,2019,Count,million pounds (GBP),23.6,Tube,Expenditure
+Scotland,2019,Count,million pounds (GBP),866.6,Train,Expenditure
+Scotland,2015,Count,million pounds (GBP),581.7,Train,Expenditure
+Scotland,2016,Count,million pounds (GBP),6.1,Tube,Expenditure
+Scotland,2013,Count,million pounds (GBP),635.9,Train,Expenditure
+Scotland,2017,Count,million pounds (GBP),1276.3,Train,Expenditure
+Scotland,2014,Count,million pounds (GBP),66,Car - hired,Expenditure
+Scotland,2018,Count,million pounds (GBP),855.4,Train,Expenditure
+Scotland,2017,Count,million pounds (GBP),3324.9,Car - own/friends/family,Expenditure
+Scotland,2019,Count,million pounds (GBP),3554.1,Car - own/friends/family,Expenditure
+Scotland,2014,Count,million pounds (GBP),2922.2,Car - own/friends/family,Expenditure
+Scotland,2018,Count,million pounds (GBP),3269.8,Car - own/friends/family,Expenditure
+Scotland,2019,Count,million pounds (GBP),3.9,Tram,Expenditure
+Scotland,2014,Count,million pounds (GBP),2.9,Bicycle,Expenditure
+Scotland,2013,Count,million pounds (GBP),0,Tram,Expenditure
+Scotland,2015,Count,million pounds (GBP),9.1,Tram,Expenditure
+Scotland,2013,Count,million pounds (GBP),4.3,Motor cycle,Expenditure
+Scotland,2016,Count,million pounds (GBP),3025.2,Car - own/friends/family,Expenditure
+Scotland,2017,Count,million pounds (GBP),151.7,Taxi,Expenditure
+Scotland,2015,Count,million pounds (GBP),2443.4,Car - own/friends/family,Expenditure
+Scotland,2015,Count,million pounds (GBP),1.5,Motor cycle,Expenditure
+Scotland,2013,Count,million pounds (GBP),2805.6,Car - own/friends/family,Expenditure
+Scotland,2014,Count,million pounds (GBP),1.2,Motor cycle,Expenditure
+Scotland,2018,Count,million pounds (GBP),44.2,Other,Expenditure
+Scotland,2015,Count,million pounds (GBP),3921.5,All,Expenditure
+Scotland,2017,Count,million pounds (GBP),5995,All,Expenditure
+Scotland,2013,Count,million pounds (GBP),14.9,Other,Expenditure
+Scotland,2016,Count,million pounds (GBP),146.3,Car - hired,Expenditure
+Scotland,2018,Count,million pounds (GBP),5473.9,All,Expenditure
+Scotland,2019,Count,million pounds (GBP),5777.3,All,Expenditure
+Scotland,2017,Count,million pounds (GBP),10.1,Tram,Expenditure
+Scotland,2014,Count,million pounds (GBP),4.4,Tram,Expenditure
+Scotland,2015,Count,million pounds (GBP),7.9,Bicycle,Expenditure
+Scotland,2016,Count,million pounds (GBP),5.7,Tram,Expenditure
+Scotland,2013,Count,million pounds (GBP),4646.7,All,Expenditure
+Scotland,2014,Count,million pounds (GBP),5020.2,All,Expenditure
+Scotland,2018,Count,million pounds (GBP),46.8,Tram,Expenditure
+Scotland,2015,Count,Million Visits,0.6,Other,Visits
+Scotland,2018,Count,Million Visits,2,Other,Visits
+Scotland,2014,Count,Million Visits,1,Other,Visits
+Scotland,2014,Count,Million Visits,0.2,Lorry/Truck/Van,Visits
+Scotland,2014,Count,Million Visits,0.6,Boat/Ship/Ferry,Visits
+Scotland,2017,Count,Million Visits,0.5,Lorry/Truck/Van,Visits
+Scotland,2019,Count,Million Visits,1.4,Other,Visits
+Scotland,2017,Count,Million Visits,1.2,Other,Visits
+Scotland,2013,Count,Million Visits,1.4,Bus or Coach - Organised Tour,Visits
+Scotland,2019,Count,Million Visits,15.9,Train,Visits
+Scotland,2015,Count,Million Visits,15.1,Train,Visits
+Scotland,2014,Count,Million Visits,0.7,Bus or Coach - Organised Tour,Visits
+Scotland,2013,Count,Million Visits,0.8,Boat/Ship/Ferry,Visits
+Scotland,2016,Count,Million Visits,2.1,Other,Visits
+Scotland,2016,Count,Million Visits,1.6,Bus or Coach - Organised Tour,Visits
+Scotland,2013,Count,Million Visits,123.9,All,Visits
+Scotland,2018,Count,Million Visits,137.8,All,Visits
+Scotland,2017,Count,Million Visits,151.1,All,Visits
+Scotland,2017,Count,Million Visits,8.5,Walked,Visits
+Scotland,2014,Count,Million Visits,1.4,Car - hired,Visits
+Scotland,2015,Count,Million Visits,7.7,Walked,Visits
+Scotland,2016,Count,Million Visits,142,All,Visits
+Scotland,2018,Count,Million Visits,2.7,Car - hired,Visits
+Scotland,2018,Count,Million Visits,0.3,Lorry/Truck/Van,Visits
+Scotland,2018,Count,Million Visits,0.2,Boat/Ship/Ferry,Visits
+Scotland,2015,Count,Million Visits,0.6,Boat/Ship/Ferry,Visits
+Scotland,2015,Count,Million Visits,0.1,Lorry/Truck/Van,Visits
+Scotland,2019,Count,Million Visits,0.3,Lorry/Truck/Van,Visits
+Scotland,2016,Count,Million Visits,0.3,Lorry/Truck/Van,Visits
+Scotland,2013,Count,Million Visits,0.4,Lorry/Truck/Van,Visits
+Scotland,2019,Count,Million Visits,2.3,Car - hired,Visits
+Scotland,2015,Count,Million Visits,1.7,Car - hired,Visits
+Scotland,2017,Count,Million Visits,0.6,Tube,Visits
+Scotland,2013,Count,Million Visits,0.2,Tube,Visits
+Scotland,2016,Count,Million Visits,2.5,Car - hired,Visits
+Scotland,2014,Count,Million Visits,8.2,Walked,Visits
+Scotland,2017,Count,Million Visits,6.4,Car - hired,Visits
+Scotland,2016,Count,Million Visits,7.9,Walked,Visits
+Scotland,2014,Count,Million Visits,0.1,Tube,Visits
+Scotland,2018,Count,Million Visits,0.6,Tube,Visits
+Scotland,2016,Count,Million Visits,0.5,Tube,Visits
+Scotland,2015,Count,Million Visits,0.1,Tube,Visits
+Scotland,2019,Count,Million Visits,2.5,Bus or Coach - Organised Tour,Visits
+Scotland,2017,Count,Million Visits,16,Train,Visits
+Scotland,2019,Count,Million Visits,1.6,Tube,Visits
+Scotland,2018,Count,Million Visits,1.1,Bus or Coach - Organised Tour,Visits
+Scotland,2014,Count,Million Visits,4.3,Taxi,Visits
+Scotland,2016,Count,Million Visits,0.5,Caravan/Campervan,Visits
+Scotland,2018,Count,Million Visits,3.5,Taxi,Visits
+Scotland,2018,Count,Million Visits,16.8,Train,Visits
+Scotland,2013,Count,Million Visits,13.2,Train,Visits
+Scotland,2016,Count,Million Visits,14.1,Train,Visits
+Scotland,2015,Count,Million Visits,2.9,Taxi,Visits
+Scotland,2015,Count,Million Visits,1.9,Bus or Coach - Organised Tour,Visits
+Scotland,2019,Count,Million Visits,7.5,Walked,Visits
+Scotland,2013,Count,Million Visits,7.4,Walked,Visits
+Scotland,2014,Count,Million Visits,14.3,Train,Visits
+Scotland,2017,Count,Million Visits,3.1,Bus or Coach - Organised Tour,Visits
+Scotland,2013,Count,Million Visits,2.7,Taxi,Visits
+Scotland,2013,Count,Million Visits,0.2,Plane,Visits
+Scotland,2017,Count,Million Visits,1.8,Plane,Visits
+Scotland,2014,Count,Million Visits,82.2,Car - own/friends/family,Visits
+Scotland,2017,Count,Million Visits,3.9,Taxi,Visits
+Scotland,2016,Count,Million Visits,4.9,Taxi,Visits
+Scotland,2013,Count,Million Visits,0.5,Motor cycle,Visits
+Scotland,2013,Count,Million Visits,0.4,Caravan/Campervan,Visits
+Scotland,2014,Count,Million Visits,0.5,Plane,Visits
+Scotland,2019,Count,Million Visits,1.2,Bicycle,Visits
+Scotland,2018,Count,Million Visits,0.3,Tram,Visits
+Scotland,2019,Count,Million Visits,80,Car - own/friends/family,Visits
+Scotland,2015,Count,Million Visits,14.2,Bus or Coach - Regular,Visits
+Scotland,2018,Count,Million Visits,0.7,Bicycle,Visits
+Scotland,2016,Count,Million Visits,0.7,Plane,Visits
+Scotland,2019,Count,Million Visits,12.7,Bus or Coach - Regular,Visits
+Scotland,2014,Count,Million Visits,0.3,Bus or Coach - Minibus,Visits
+Scotland,2015,Count,Million Visits,0.2,Tram,Visits
+Scotland,2015,Count,Million Visits,76,Car - own/friends/family,Visits
+Scotland,2017,Count,Million Visits,1.5,Bicycle,Visits
+Scotland,2015,Count,Million Visits,0.9,Plane,Visits
+Scotland,2019,Count,Million Visits,0.4,Caravan/Campervan,Visits
+Scotland,2013,Count,Million Visits,0.2,Bus or Coach - Minibus,Visits
+Scotland,2018,Count,Million Visits,1.7,Plane,Visits
+Scotland,2015,Count,Million Visits,0.9,Bus or Coach - Minibus,Visits
+Scotland,2014,Count,Million Visits,0.2,Motor cycle,Visits
+Scotland,2017,Count,Million Visits,0.8,Caravan/Campervan,Visits
+Scotland,2019,Count,Million Visits,5.7,Taxi,Visits
+Scotland,2014,Count,Million Visits,11.6,Bus or Coach - Regular,Visits
+Scotland,2014,Count,Million Visits,0.1,Caravan/Campervan,Visits
+Scotland,2019,Count,Million Visits,1.3,Plane,Visits
+Scotland,2018,Count,Million Visits,0.2,Caravan/Campervan,Visits
+Scotland,2014,Count,Million Visits,1.3,Bicycle,Visits
+Scotland,2016,Count,Million Visits,0.1,Boat/Ship/Ferry,Visits
+Scotland,2015,Count,Million Visits,124.1,All,Visits
+Scotland,2013,Count,Million Visits,1.5,Bicycle,Visits
+Scotland,2017,Count,Million Visits,92.6,Car - own/friends/family,Visits
+Scotland,2016,Count,Million Visits,13.8,Bus or Coach - Regular,Visits
+Scotland,2015,Count,Million Visits,0.8,Bicycle,Visits
+Scotland,2019,Count,Million Visits,0.5,Boat/Ship/Ferry,Visits
+Scotland,2013,Count,Million Visits,0.7,Other,Visits
+Scotland,2013,Count,Million Visits,1.7,Car - hired,Visits
+Scotland,2014,Count,Million Visits,127.1,All,Visits
+Scotland,2019,Count,Million Visits,133.6,All,Visits
+Scotland,2018,Count,Million Visits,11.2,Walked,Visits
+Scotland,2017,Count,Million Visits,0.5,Boat/Ship/Ferry,Visits
+Scotland,2015,Count,Million Visits,0.2,Motor cycle,Visits
+Scotland,2017,Count,Million Visits,13.2,Bus or Coach - Regular,Visits
+Scotland,2013,Count,Million Visits,12.8,Bus or Coach - Regular,Visits
+Scotland,2019,Count,Million Visits,0.4,Tram,Visits
+Scotland,2017,Count,Million Visits,0.6,Tram,Visits
+Scotland,2014,Count,Million Visits,0.4,Tram,Visits
+Scotland,2013,Count,Million Visits,0,Tram,Visits
+Scotland,2016,Count,Million Visits,0.9,Bicycle,Visits
+Scotland,2016,Count,Million Visits,91.9,Car - own/friends/family,Visits
+Scotland,2018,Count,Million Visits,12.2,Bus or Coach - Regular,Visits
+Scotland,2018,Count,Million Visits,84.2,Car - own/friends/family,Visits
+Scotland,2013,Count,Million Visits,79.7,Car - own/friends/family,Visits
+Scotland,2016,Count,Million Visits,0.2,Tram,Visits
+Scotland,2015,Count,Million Visits,0.2,Caravan/Campervan,Visits

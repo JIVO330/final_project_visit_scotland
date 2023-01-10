@@ -1,6 +1,6 @@
 ---
-title: "Presentation1"
-author: "Juan Ignacio De Vicente"
+title: "Visit Scotland"
+author: "Juan Ignacio De Vicente Ojeda"
 date: "2023-01-09"
 output: ioslides_presentation
 ---
@@ -11,12 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-## VISIT SCOTLAND
 
-
-
-Juan Ignacio De Vicente Ojeda
-edinburgh
 ## INTRODUCTION {.smaller}
 
 IN 2020 JUST BEFORE THE PANDEMIC, VISIT SCOTLAND IN CONJUCTION WITH VISIT ENGLAND AND VISITWALES CHANGE THE PARAMETERS FOR RECORDING THE VISISTS.... SEE THE PDF.
@@ -24,7 +19,19 @@ IN 2020 JUST BEFORE THE PANDEMIC, VISIT SCOTLAND IN CONJUCTION WITH VISIT ENGLAN
 OUR INTENTION IS SHOW A GLIMPSE ABOUT HOW WAS FOR THE COUNTRY THE LAST YEAR 2019 BEFORE THE INTRODUCCTION OF THE NEW METHOD AND THE DISRUPTION CAUSED BY THE PANDEMIC AND THE LOCKDOWNS RESTRICTIONS DURING 2020,2021 AND THE BEGINING OF 2022 PLUS THE CURRENT WORLD ECONOMIC RECESSION.
 
 
+## Data Context/ Disclaimer/ Assumptions
 
+
+
+
+
+##  Definition of Tourism Activity
+
+
+
+
+
+## Tourism in Scotland. Q1
 
 ## Slide with Bullets
 

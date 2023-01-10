@@ -1,0 +1,577 @@
+area,year,measurement,units,value,breakdown_of_domestic_tourism,age,marital_status,gender,employment_status,children,access_to_car,social_grade,type_of_location_visited,tourism_activity
+Scotland,2013,Count,Million Visits,22,Visits,45-54 years,All,All,All,All,All,All,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2013,Count,Million Visits,58,Visits,All,All,Male,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,23,Visits,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,56,Visits,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,52,Visits,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,15,Visits,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,23,Visits,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,59,Visits,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,73,Visits,All,Married,All,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,142,Visits,All,All,All,All,All,All,All,All areas,All
+Scotland,2017,Count,Million Visits,34,Visits,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,19,Visits,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,20,Visits,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,23,Visits,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,31,Visits,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,73,Visits,All,Married,All,All,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,30,Visits,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,82,Visits,All,Married,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,19,Visits,35-44 years,All,All,All,All,All,All,NA,"Night out to a bar, pub and/or club"
+Scotland,2014,Count,Million Visits,23,Visits,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,23,Visits,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,18,Visits,35-44 years,All,All,All,All,All,All,Rural countryside,"Night out to a bar, pub and/or club"
+Scotland,2013,Count,Million Visits,21,Visits,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,47,Visits,All,All,All,All,All,All,AB,NA,NA
+Scotland,2016,Count,Million Visits,42,Visits,All,All,All,All,All,All,C1,NA,NA
+Scotland,2014,Count,Million Visits,18,Visits,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,45,Visits,All,All,All,All,All,All,AB,NA,Visited friends or family for leisure
+Scotland,2018,Count,Million Visits,28,Visits,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,75,Visits,All,Married,All,All,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,79,Visits,All,Married,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,20,Visits,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,21,Visits,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,25,Visits,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,78,Visits,All,Married,All,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,20,Visits,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,124,Visits,All,All,All,All,All,All,All,All areas,All
+Scotland,2019,Count,million pounds (GBP),1228,Expenditure,All,All,All,All,All,All,C2,NA,NA
+Scotland,2016,Count,million pounds (GBP),729,Expenditure,All,All,All,All,All,All,DE,NA,NA
+Scotland,2015,Count,million pounds (GBP),1484,Expenditure,All,All,All,All,All,All,AB,NA,NA
+Scotland,2018,Count,million pounds (GBP),637,Expenditure,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),2033,Expenditure,All,All,All,All,All,All,AB,NA,NA
+Scotland,2017,Count,million pounds (GBP),816,Expenditure,All,All,All,All,All,All,DE,NA,NA
+Scotland,2017,Count,million pounds (GBP),2003,Expenditure,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),522,Expenditure,All,All,All,All,All,All,DE,NA,NA
+Scotland,2017,Count,million pounds (GBP),1645,Expenditure,All,All,All,All,All,All,C1,NA,NA
+Scotland,2016,Count,million pounds (GBP),1076,Expenditure,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),958,Expenditure,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),898,Expenditure,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),1416,Expenditure,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),2242,Expenditure,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),994,Expenditure,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),1361,Expenditure,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),1454,Expenditure,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),888,Expenditure,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,25,Visits,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,18,Visits,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,23,Visits,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,48,Visits,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,24,Visits,65 years and over,All,All,All,All,All,All,NA,General day out/ to explore an area
+Scotland,2019,Count,Million Visits,20,Visits,35-44 years,All,All,All,All,All,All,NA,Shopping for items that you do not regularly buy
+Scotland,2015,Count,Million Visits,62,Visits,All,All,Female,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,23,Visits,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,26,Visits,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,54,Visits,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,69,Visits,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),2018,Expenditure,All,All,All,All,All,All,AB,NA,NA
+Scotland,2016,Count,Million Visits,57,Visits,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,25,Visits,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,124,Visits,All,All,All,All,All,All,All,All areas,All
+Scotland,2016,Count,Million Visits,28,Visits,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,17,Visits,45-54 years,All,All,All,All,All,All,Village,NA
+Scotland,2019,Count,Million Visits,27,Visits,All,All,All,All,All,All,C2,NA,NA
+Scotland,2014,Count,Million Visits,127,Visits,All,All,All,All,All,All,All,All areas,All
+Scotland,2018,Count,Million Visits,40,Visits,All,All,All,All,All,All,C1,NA,NA
+Scotland,2014,Count,Million Visits,67,Visits,All,All,Female,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,46,Visits,All,All,All,All,All,All,C1,NA,Visited friends or family for leisure
+Scotland,2013,Count,Million Visits,66,Visits,All,All,Female,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,20,Visits,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,24,Visits,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,62,Visits,All,All,Male,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,151,Visits,All,All,All,All,All,All,All,All areas,All
+Scotland,2018,Count,Million Visits,29,Visits,All,All,All,All,All,All,C2,NA,NA
+Scotland,2017,Count,Million Visits,73,Visits,All,All,Male,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),2429,Expenditure,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,78,Visits,All,All,Female,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,61,Visits,All,All,Male,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,25,Visits,All,All,All,All,All,All,DE,NA,NA
+Scotland,2013,Count,Million Visits,40,Visits,All,All,All,All,All,All,C1,NA,NA
+Scotland,2013,Count,Million Visits,22,Visits,All,All,All,All,All,All,DE,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2019,Count,Million Visits,35,Visits,All,All,All,All,All,All,DE,NA,NA
+Scotland,2018,Count,Million Visits,70,Visits,All,All,Female,All,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,31,Visits,All,All,All,All,All,All,C2,NA,NA
+Scotland,2016,Count,Million Visits,80,Visits,All,All,Female,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,36,Visits,All,All,All,All,All,All,AB,NA,NA
+Scotland,2018,Count,Million Visits,68,Visits,All,All,Male,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,22,Visits,All,All,All,All,All,All,DE,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2015,Count,Million Visits,19,Visits,All,All,All,All,All,All,DE,NA,"Night out to a bar, pub and/or club"
+Scotland,2017,Count,Million Visits,29,Visits,All,All,All,All,All,All,DE,NA,NA
+Scotland,2017,Count,Million Visits,107,Visits,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2018,Count,Million Visits,97,Visits,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2018,Count,Million Visits,138,Visits,All,All,All,All,All,All,All,All areas,All
+Scotland,2018,Count,Million Visits,18,Visits,35-44 years,All,All,All,All,All,All,NA,Shopping for items that you do not regularly buy
+Scotland,2018,Count,Million Visits,17,Visits,45-54 years,All,All,All,All,All,All,Rural countryside,NA
+Scotland,2013,Count,Million Visits,92,Visits,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2016,Count,Million Visits,108,Visits,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2015,Count,Million Visits,92,Visits,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2014,Count,Million Visits,96,Visits,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2017,Count,Million Visits,24,Visits,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,62,Visits,All,All,Male,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,62,Visits,All,All,Male,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,18,Visits,All,All,All,All,All,All,C2,NA,NA
+Scotland,2016,Count,Million Visits,25,Visits,All,All,All,All,All,All,C2,NA,NA
+Scotland,2013,Count,Million Visits,32,Visits,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2018,Count,Million Visits,41,Visits,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2017,Count,Million Visits,23,Visits,65 years and over,All,All,All,All,All,All,NA,"Night out to a bar, pub and/or club"
+Scotland,2019,Count,Million Visits,134,Visits,All,All,All,All,All,All,All,All areas,All
+Scotland,2019,Count,Million Visits,17,Visits,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,24,Visits,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,71,Visits,All,All,Female,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,25,Visits,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,22,Visits,16-24 years,All,All,All,All,All,All,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2013,Count,Million Visits,23,Visits,All,All,All,All,All,All,C2,NA,NA
+Scotland,2015,Count,Million Visits,16,Visits,All,All,All,All,All,All,C2,NA,Shopping for items that you do not regularly buy
+Scotland,2015,Count,Million Visits,27,Visits,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,85,Visits,All,Married,All,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,36,Visits,All,All,All,All,All,All,C1,NA,NA
+Scotland,2017,Count,Million Visits,42,Visits,All,All,All,All,All,All,C1,NA,NA
+Scotland,2015,Count,million pounds (GBP),1249,Expenditure,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,43,Visits,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2015,Count,Million Visits,32,Visits,All,All,All,All,Yes - Children,All,All,Small town,NA
+Scotland,2014,Count,Million Visits,41,Visits,All,All,All,All,All,All,C1,NA,Visited friends or family for leisure
+Scotland,2014,Count,million pounds (GBP),5020,Expenditure,All,All,All,All,All,All,All,All areas,All
+Scotland,2013,Count,million pounds (GBP),1319,Expenditure,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,39,Visits,All,All,All,All,All,All,AB,NA,NA
+Scotland,2015,Count,Million Visits,44,Visits,All,All,All,All,All,All,AB,NA,NA
+Scotland,2016,Count,Million Visits,50,Visits,All,All,All,All,All,All,AB,NA,NA
+Scotland,2017,Count,Million Visits,44,Visits,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2017,Count,Million Visits,50,Visits,All,All,All,All,All,All,AB,NA,NA
+Scotland,2018,Count,Million Visits,24,Visits,All,All,All,All,All,All,DE,NA,NA
+Scotland,2019,Count,Million Visits,91,Visits,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2016,Count,Million Visits,34,Visits,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2014,Count,Million Visits,31,Visits,All,All,All,All,Yes - Children,All,All,NA,Went out for a meal
+Scotland,2019,Count,million pounds (GBP),2851,Expenditure,All,All,Male,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),573,Expenditure,All,All,All,All,All,All,DE,NA,NA
+Scotland,2013,Count,million pounds (GBP),3328,Expenditure,All,Married,All,All,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),1079,Expenditure,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),888,Expenditure,All,All,All,All,All,All,DE,NA,NA
+Scotland,2017,Count,million pounds (GBP),3003,Expenditure,All,All,Male,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),1807,Expenditure,All,All,All,All,All,All,AB,NA,NA
+Scotland,2019,Count,million pounds (GBP),1853,Expenditure,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),2257,Expenditure,All,All,Male,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),448,Expenditure,All,All,All,All,All,All,C2,NA,NA
+Scotland,2019,Count,million pounds (GBP),774,Expenditure,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),1057,Expenditure,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),1076,Expenditure,All,All,All,All,All,All,C2,NA,NA
+Scotland,2018,Count,million pounds (GBP),1184,Expenditure,All,All,All,All,All,All,C2,NA,NA
+Scotland,2019,Count,million pounds (GBP),1319,Expenditure,All,All,All,All,All,All,DE,NA,NA
+Scotland,2019,Count,million pounds (GBP),873,Expenditure,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),1306,Expenditure,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),1501,Expenditure,All,All,All,All,All,All,C2,NA,NA
+Scotland,2017,Count,million pounds (GBP),5995,Expenditure,All,All,All,All,All,All,All,All areas,All
+Scotland,2015,Count,million pounds (GBP),2672,Expenditure,All,Married,All,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),1929,Expenditure,All,All,Male,All,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),3924,Expenditure,All,Married,All,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),2483,Expenditure,All,All,Male,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),1993,Expenditure,All,All,Female,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),2389,Expenditure,All,All,Female,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),2992,Expenditure,All,All,Female,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),2024,Expenditure,All,All,All,All,All,All,AB,NA,NA
+Scotland,2016,Count,million pounds (GBP),4916,Expenditure,All,All,All,All,All,All,All,All areas,All
+Scotland,2014,Count,million pounds (GBP),2427,Expenditure,All,All,Male,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),3566,Expenditure,All,Married,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),3388,Expenditure,All,Married,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),1885,Expenditure,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),3922,Expenditure,All,All,All,All,All,All,All,All areas,All
+Scotland,2019,Count,million pounds (GBP),2926,Expenditure,All,All,Female,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),1600,Expenditure,All,All,All,All,All,All,AB,NA,NA
+Scotland,2013,Count,Million Visits,24,Visits,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2016,Count,million pounds (GBP),640,Expenditure,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2015,Count,Million Visits,30,Visits,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2017,Count,Million Visits,24,Visits,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2018,Count,Million Visits,23,Visits,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2019,Count,Million Visits,110,Visits,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2015,Count,Million Visits,95,Visits,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2014,Count,Million Visits,101,Visits,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2013,Count,Million Visits,100,Visits,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2016,Count,Million Visits,22,Visits,All,All,All,All,All,No access to car (0),All,Rural countryside,NA
+Scotland,2017,Count,million pounds (GBP),763,Expenditure,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2013,Count,million pounds (GBP),578,Expenditure,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2019,Count,million pounds (GBP),825,Expenditure,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2014,Count,million pounds (GBP),741,Expenditure,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2015,Count,million pounds (GBP),682,Expenditure,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2019,Count,Million Visits,23,Visits,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2018,Count,million pounds (GBP),899,Expenditure,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2014,Count,Million Visits,26,Visits,All,All,All,All,All,No access to car (0),All,NA,NA
+Scotland,2014,Count,million pounds (GBP),1898,Expenditure,All,All,All,All,All,All,AB,NA,NA
+Scotland,2014,Count,million pounds (GBP),2593,Expenditure,All,All,Female,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),2434,Expenditure,All,All,Female,All,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,115,Visits,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2019,Count,million pounds (GBP),4952,Expenditure,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2016,Count,million pounds (GBP),1465,Expenditure,All,All,All,All,All,All,C1,NA,NA
+Scotland,2014,Count,million pounds (GBP),612,Expenditure,All,All,All,All,All,All,DE,Rural countryside,NA
+Scotland,2019,Count,million pounds (GBP),5777,Expenditure,All,All,All,All,All,All,All,All areas,All
+Scotland,2019,Count,million pounds (GBP),689,Expenditure,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),4069,Expenditure,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2016,Count,million pounds (GBP),4276,Expenditure,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2017,Count,million pounds (GBP),5232,Expenditure,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2014,Count,million pounds (GBP),4279,Expenditure,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2016,Count,Million Visits,120,Visits,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2018,Count,million pounds (GBP),4575,Expenditure,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2017,Count,Million Visits,127,Visits,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2015,Count,million pounds (GBP),3240,Expenditure,All,All,All,All,All,Access to car (1+),All,NA,NA
+Scotland,2014,Count,million pounds (GBP),1633,Expenditure,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),3240,Expenditure,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),920,Expenditure,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),702,Expenditure,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),794,Expenditure,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),541,Expenditure,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),799,Expenditure,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),969,Expenditure,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),3401,Expenditure,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),702,Expenditure,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),1212,Expenditure,All,All,All,All,All,All,C1,NA,NA
+Scotland,2013,Count,million pounds (GBP),615,Expenditure,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),3604,Expenditure,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),2579,Expenditure,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),1455,Expenditure,All,Not Married,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),729,Expenditure,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),825,Expenditure,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),618,Expenditure,All,All,All,All,All,All,C2,NA,NA
+Scotland,2015,Count,million pounds (GBP),748,Expenditure,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),831,Expenditure,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),2839,Expenditure,All,All,Male,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),5474,Expenditure,All,All,All,All,All,All,All,All areas,All
+Scotland,2018,Count,million pounds (GBP),2635,Expenditure,All,All,Female,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),966,Expenditure,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),3992,Expenditure,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),809,Expenditure,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),733,Expenditure,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),565,Expenditure,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),709,Expenditure,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),563,Expenditure,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),808,Expenditure,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),2073,Expenditure,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),638,Expenditure,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),911,Expenditure,35-44 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),850,Expenditure,55-64 years,All,All,All,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),4647,Expenditure,All,All,All,All,All,All,All,All areas,All
+Scotland,2013,Count,million pounds (GBP),1555,Expenditure,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),1449,Expenditure,All,All,All,All,All,All,C1,NA,NA
+Scotland,2016,Count,million pounds (GBP),3461,Expenditure,All,Married,All,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),1342,Expenditure,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),915,Expenditure,All,All,All,All,All,All,C2,NA,NA
+Scotland,2013,Count,million pounds (GBP),3092,Expenditure,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),3589,Expenditure,All,Married,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),935,Expenditure,16-24 years,All,All,All,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),808,Expenditure,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),1892,Expenditure,All,All,All,All,All,All,C1,NA,NA
+Scotland,2019,Count,million pounds (GBP),3535,Expenditure,All,All,All,All,No - Children,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),1268,Expenditure,25-34 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),1378,Expenditure,All,All,All,All,All,All,C1,NA,NA
+Scotland,2015,Count,million pounds (GBP),1418,Expenditure,All,All,All,All,All,All,C1,NA,NA
+Scotland,2015,Count,million pounds (GBP),468,Expenditure,65 years and over,All,All,All,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),607,Expenditure,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),896,Expenditure,45-54 years,All,All,All,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),1677,Expenditure,All,All,All,All,Yes - Children,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),232,Expenditure,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,14,Visits,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,17,Visits,All,All,All,In full or part time education,All,All,All,Village,NA
+Scotland,2014,Count,Million Visits,11,Visits,All,All,All,In full or part time education,All,All,All,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2018,Count,Million Visits,15,Visits,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),500,Expenditure,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,13,Visits,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,16,Visits,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),283,Expenditure,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),571,Expenditure,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),402,Expenditure,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),322,Expenditure,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,14,Visits,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),349,Expenditure,All,All,All,In full or part time education,All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),2894,Expenditure,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,88,Visits,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2019,Count,Million Visits,74,Visits,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,77,Visits,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),2294,Expenditure,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),3334,Expenditure,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,67,Visits,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),3177,Expenditure,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),3564,Expenditure,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),4011,Expenditure,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,78,Visits,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,72,Visits,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2018,Count,million pounds (GBP),3771,Expenditure,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,68,Visits,All,All,All,Employed/self-employed (full or part time),All,All,All,NA,NA
+Scotland,2013,Count,million pounds (GBP),1600,Expenditure,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),368,Expenditure,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2016,Count,million pounds (GBP),255,Expenditure,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2017,Count,million pounds (GBP),450,Expenditure,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2015,Count,million pounds (GBP),483,Expenditure,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2017,Count,Million Visits,16,Visits,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2014,Count,Million Visits,11,Visits,All,All,All,Unemployed/not working,All,All,All,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2018,Count,million pounds (GBP),396,Expenditure,All,All,All,Unemployed/not working,All,All,All,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2019,Count,Million Visits,17,Visits,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2019,Count,million pounds (GBP),715,Expenditure,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2018,Count,Million Visits,15,Visits,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2015,Count,Million Visits,15,Visits,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2013,Count,Million Visits,46,Visits,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2016,Count,Million Visits,11,Visits,All,All,All,Unemployed/not working,All,All,All,NA,NA
+Scotland,2014,Count,million pounds (GBP),186,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2019,Count,million pounds (GBP),1456,Expenditure,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2013,Count,million pounds (GBP),217,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2018,Count,million pounds (GBP),6,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2018,Count,million pounds (GBP),1234,Expenditure,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2015,Count,million pounds (GBP),230,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2016,Count,million pounds (GBP),302,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2019,Count,million pounds (GBP),359,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2017,Count,million pounds (GBP),458,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2016,Count,million pounds (GBP),1037,Expenditure,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2013,Count,million pounds (GBP),68,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2013,Count,million pounds (GBP),1035,Expenditure,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2017,Count,million pounds (GBP),246,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2019,Count,million pounds (GBP),35,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2015,Count,million pounds (GBP),914,Expenditure,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2016,Count,million pounds (GBP),32,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2016,Count,million pounds (GBP),249,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2015,Count,million pounds (GBP),36,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2014,Count,million pounds (GBP),128,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2017,Count,million pounds (GBP),75,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2015,Count,million pounds (GBP),81,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2019,Count,million pounds (GBP),237,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2018,Count,million pounds (GBP),151,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2019,Count,million pounds (GBP),457,Expenditure,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2015,Count,million pounds (GBP),308,Expenditure,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2019,Count,million pounds (GBP),3400,Expenditure,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2018,Count,million pounds (GBP),3111,Expenditure,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2017,Count,million pounds (GBP),1377,Expenditure,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2017,Count,million pounds (GBP),883,Expenditure,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2014,Count,million pounds (GBP),1398,Expenditure,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2014,Count,million pounds (GBP),2873,Expenditure,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2015,Count,million pounds (GBP),2254,Expenditure,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2017,Count,million pounds (GBP),3379,Expenditure,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2016,Count,million pounds (GBP),2630,Expenditure,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2014,Count,million pounds (GBP),286,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2013,Count,million pounds (GBP),2850,Expenditure,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2013,Count,million pounds (GBP),206,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2017,Count,million pounds (GBP),778,Expenditure,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2016,Count,million pounds (GBP),520,Expenditure,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2019,Count,million pounds (GBP),429,Expenditure,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2015,Count,million pounds (GBP),402,Expenditure,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2018,Count,million pounds (GBP),228,Expenditure,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2018,Count,million pounds (GBP),502,Expenditure,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2016,Count,million pounds (GBP),482,Expenditure,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2014,Count,million pounds (GBP),510,Expenditure,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2018,Count,million pounds (GBP),651,Expenditure,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2013,Count,million pounds (GBP),483,Expenditure,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2013,Count,million pounds (GBP),545,Expenditure,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2013,Count,Million Visits,33,Visits,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2013,Count,Million Visits,15,Visits,NA,NA,NA,NA,NA,NA,NA,Village,Shopping for items that you do not regularly buy
+Scotland,2014,Count,Million Visits,4,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,"Special personal events e.g. wedding, graduation"
+Scotland,2016,Count,Million Visits,5,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,"Special personal events e.g. wedding, graduation"
+Scotland,2018,Count,Million Visits,16,Visits,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2014,Count,Million Visits,12,Visits,NA,NA,NA,NA,NA,NA,NA,Village,"Entertainment - to a cinema, concert or theatre"
+Scotland,2017,Count,Million Visits,19,Visits,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2017,Count,Million Visits,70,Visits,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2019,Count,Million Visits,7,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,"Sport participation, e.g. exercise classes, gym"
+Scotland,2019,Count,Million Visits,16,Visits,NA,NA,NA,NA,NA,NA,NA,Village,NA
+Scotland,2014,Count,Million Visits,35,Visits,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2018,Count,Million Visits,38,Visits,NA,NA,NA,NA,NA,NA,NA,Small town,Went out for a meal
+Scotland,2013,Count,Million Visits,59,Visits,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2018,Count,Million Visits,64,Visits,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2016,Count,Million Visits,61,Visits,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2015,Count,Million Visits,59,Visits,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2017,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2019,Count,Million Visits,59,Visits,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2015,Count,Million Visits,4,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,NA
+Scotland,2016,Count,Million Visits,7,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2015,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,"Special public event e.g. festival, exhibition"
+Scotland,2018,Count,Million Visits,5,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,"Special personal events e.g. wedding, graduation"
+Scotland,2019,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,Day trips/excursions for other leisure purpose
+Scotland,2013,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,Watched live sporting events (not on TV)
+Scotland,2014,Count,Million Visits,59,Visits,NA,NA,NA,NA,NA,NA,NA,City/large town,NA
+Scotland,2014,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,Leisure activities e.g. hobbies & evening classes
+Scotland,2014,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,"Special public event e.g. festival, exhibition"
+Scotland,2014,Count,Million Visits,19,Visits,NA,NA,NA,NA,NA,NA,NA,Rural countryside,General day out/ to explore an area
+Scotland,2017,Count,Million Visits,21,Visits,NA,NA,NA,NA,NA,NA,NA,Rural countryside,Shopping for items that you do not regularly buy
+Scotland,2019,Count,Million Visits,19,Visits,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2014,Count,Million Visits,2,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - other,"Day out to a beauty/health centre/spa, etc."
+Scotland,2017,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,Day trips/excursions for other leisure purpose
+Scotland,2017,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,Leisure activities e.g. hobbies & evening classes
+Scotland,2018,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside resort or town,NA
+Scotland,2013,Count,Million Visits,4,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - beach,"Special personal events e.g. wedding, graduation"
+Scotland,2016,Count,Million Visits,2,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - other,"Day out to a beauty/health centre/spa, etc."
+Scotland,2017,Count,Million Visits,2,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2015,Count,Million Visits,11,Visits,NA,NA,NA,NA,NA,NA,NA,Village,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2015,Count,Million Visits,17,Visits,NA,NA,NA,NA,NA,NA,NA,Rural countryside,NA
+Scotland,2016,Count,Million Visits,39,Visits,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2017,Count,Million Visits,40,Visits,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2019,Count,Million Visits,37,Visits,NA,NA,NA,NA,NA,NA,NA,Small town,NA
+Scotland,2018,Count,Million Visits,2,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2019,Count,Million Visits,1,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2015,Count,Million Visits,2,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - other,"Day out to a beauty/health centre/spa, etc."
+Scotland,2013,Count,Million Visits,3,Visits,NA,NA,NA,NA,NA,NA,NA,Seaside - other,NA
+Scotland,2019,Count,million pounds (GBP),1662,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2016,Count,million pounds (GBP),469,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2014,Count,million pounds (GBP),892,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2017,Count,million pounds (GBP),354,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2015,Count,million pounds (GBP),400,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2014,Count,million pounds (GBP),421,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2013,Count,million pounds (GBP),243,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2015,Count,million pounds (GBP),264,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2018,Count,million pounds (GBP),285,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2014,Count,million pounds (GBP),1536,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2018,Count,million pounds (GBP),265,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2016,Count,million pounds (GBP),261,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2017,Count,million pounds (GBP),421,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2014,Count,million pounds (GBP),469,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2019,Count,million pounds (GBP),476,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2017,Count,million pounds (GBP),374,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2015,Count,million pounds (GBP),392,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2019,Count,million pounds (GBP),629,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2014,Count,million pounds (GBP),311,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2016,Count,million pounds (GBP),205,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2017,Count,million pounds (GBP),394,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2016,Count,million pounds (GBP),1892,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2014,Count,million pounds (GBP),1966,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2017,Count,million pounds (GBP),551,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2013,Count,million pounds (GBP),1675,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2019,Count,million pounds (GBP),551,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2013,Count,million pounds (GBP),228,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2018,Count,million pounds (GBP),496,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2018,Count,million pounds (GBP),1538,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2016,Count,million pounds (GBP),273,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2017,Count,million pounds (GBP),1561,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2019,Count,million pounds (GBP),266,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2015,Count,million pounds (GBP),1033,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2014,Count,million pounds (GBP),71,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2013,Count,million pounds (GBP),1512,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2014,Count,million pounds (GBP),223,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2016,Count,million pounds (GBP),826,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2016,Count,million pounds (GBP),1380,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2013,Count,million pounds (GBP),85,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2015,Count,million pounds (GBP),87,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2013,Count,million pounds (GBP),147,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2015,Count,million pounds (GBP),142,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2018,Count,million pounds (GBP),893,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2019,Count,million pounds (GBP),1111,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2019,Count,million pounds (GBP),1059,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2017,Count,million pounds (GBP),1276,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2018,Count,million pounds (GBP),1150,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2019,Count,million pounds (GBP),507,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2013,Count,million pounds (GBP),840,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2015,Count,million pounds (GBP),647,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2017,Count,million pounds (GBP),1298,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2016,Count,million pounds (GBP),69,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2013,Count,million pounds (GBP),699,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2014,Count,million pounds (GBP),571,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2016,Count,million pounds (GBP),973,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2015,Count,million pounds (GBP),876,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2013,Count,million pounds (GBP),414,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2015,Count,million pounds (GBP),506,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2015,Count,million pounds (GBP),345,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2017,Count,million pounds (GBP),742,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2018,Count,million pounds (GBP),1010,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2016,Count,million pounds (GBP),806,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2018,Count,million pounds (GBP),87,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2019,Count,million pounds (GBP),443,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2013,Count,million pounds (GBP),474,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2017,Count,million pounds (GBP),252,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2019,Count,million pounds (GBP),341,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2018,Count,million pounds (GBP),467,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2013,Count,million pounds (GBP),145,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2014,Count,million pounds (GBP),599,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2017,Count,million pounds (GBP),1042,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2013,Count,million pounds (GBP),312,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2015,Count,million pounds (GBP),269,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2018,Count,million pounds (GBP),362,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2013,Count,million pounds (GBP),528,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2019,Count,million pounds (GBP),869,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2014,Count,million pounds (GBP),317,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2016,Count,million pounds (GBP),289,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2014,Count,million pounds (GBP),715,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2015,Count,million pounds (GBP),215,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2019,Count,million pounds (GBP),406,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2017,Count,million pounds (GBP),443,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2013,Count,million pounds (GBP),143,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2019,Count,million pounds (GBP),2078,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2013,Count,million pounds (GBP),1065,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2015,Count,million pounds (GBP),1631,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2017,Count,million pounds (GBP),2208,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2018,Count,million pounds (GBP),191,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2017,Count,million pounds (GBP),1818,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2019,Count,million pounds (GBP),1841,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2014,Count,million pounds (GBP),462,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2014,Count,million pounds (GBP),469,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2018,Count,million pounds (GBP),577,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2016,Count,million pounds (GBP),378,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2016,Count,million pounds (GBP),330,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2015,Count,million pounds (GBP),593,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2019,Count,million pounds (GBP),620,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2016,Count,million pounds (GBP),1158,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2015,Count,million pounds (GBP),1186,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2018,Count,million pounds (GBP),1959,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2014,Count,million pounds (GBP),1376,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2017,Count,million pounds (GBP),903,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2016,Count,million pounds (GBP),604,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2018,Count,million pounds (GBP),1698,Expenditure,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2013,Count,Million Visits,11,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2013,Count,Million Visits,6,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2018,Count,Million Visits,14,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2019,Count,Million Visits,13,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2013,Count,Million Visits,1,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2017,Count,Million Visits,14,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2014,Count,Million Visits,5,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2015,Count,Million Visits,7,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2013,Count,Million Visits,5,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2016,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2017,Count,Million Visits,15,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2016,Count,Million Visits,12,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2013,Count,Million Visits,11,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2014,Count,Million Visits,10,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2013,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2015,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2018,Count,Million Visits,3,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2015,Count,Million Visits,10,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2019,Count,Million Visits,5,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2018,Count,Million Visits,13,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2017,Count,Million Visits,4,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Day out to a beauty/health centre/spa, etc."
+Scotland,2018,Count,Million Visits,10,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Day trips/excursions for other leisure purpose
+Scotland,2018,Count,Million Visits,25,Visits,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2017,Count,Million Visits,25,Visits,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2018,Count,Million Visits,19,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2016,Count,Million Visits,19,Visits,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2019,Count,Million Visits,18,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2014,Count,Million Visits,20,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2013,Count,Million Visits,17,Visits,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2015,Count,Million Visits,18,Visits,NA,NA,NA,NA,NA,NA,NA,NA,General day out/ to explore an area
+Scotland,2017,Count,Million Visits,10,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2018,Count,Million Visits,7,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2016,Count,Million Visits,20,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Night out to a bar, pub and/or club"
+Scotland,2018,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2016,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2017,Count,Million Visits,10,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Sport participation, e.g. exercise classes, gym"
+Scotland,2019,Count,Million Visits,8,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2016,Count,Million Visits,18,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2019,Count,Million Visits,13,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2015,Count,Million Visits,5,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2015,Count,Million Visits,24,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2015,Count,Million Visits,12,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2017,Count,Million Visits,49,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2019,Count,Million Visits,30,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2016,Count,Million Visits,6,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2016,Count,Million Visits,36,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2014,Count,Million Visits,17,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Shopping for items that you do not regularly buy
+Scotland,2016,Count,Million Visits,30,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2017,Count,Million Visits,12,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2013,Count,Million Visits,6,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special public event e.g. festival, exhibition"
+Scotland,2016,Count,Million Visits,12,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2014,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2018,Count,Million Visits,11,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Watched live sporting events (not on TV)
+Scotland,2016,Count,Million Visits,44,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2019,Count,Million Visits,33,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2019,Count,Million Visits,13,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2017,Count,Million Visits,6,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2013,Count,Million Visits,41,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2017,Count,Million Visits,39,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2018,Count,Million Visits,9,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2016,Count,Million Visits,13,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Visitor attraction e.g. theme park, museum, zoo"
+Scotland,2016,Count,Million Visits,13,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2015,Count,Million Visits,12,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Entertainment - to a cinema, concert or theatre"
+Scotland,2019,Count,Million Visits,11,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Leisure activities e.g. hobbies & evening classes
+Scotland,2018,Count,Million Visits,25,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
+Scotland,2015,Count,Million Visits,35,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2019,Count,Million Visits,49,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Visited friends or family for leisure
+Scotland,2019,Count,Million Visits,6,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Special personal events e.g. wedding, graduation"
+Scotland,2013,Count,Million Visits,29,Visits,NA,NA,NA,NA,NA,NA,NA,NA,Went out for a meal
+Scotland,2017,Count,Million Visits,35,Visits,NA,NA,NA,NA,NA,NA,NA,NA,"Outdoor leisure activities e.g. walking, golf"
