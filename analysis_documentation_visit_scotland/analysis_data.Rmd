@@ -5,6 +5,8 @@ output: html_notebook
 ```{r}
 library(tidyverse)
 library(janitor)
+library(fable)
+library(tsibble)
 ```
 
 ```{r}
@@ -36,82 +38,11 @@ tourism_day_visits_transport_clean
 
 
 
-Q1
-_What kind of tourism activity generates the highest income for Scotland?_
-
-TOURIST ACTIVITY highest income. There are data from 2013 CHECK THE DATA. Only inter
-
-```{r}
-tourism_day_visits_activities_clean %>%
-  select(year,units,value,tourism_activity) %>% 
-  arrange(desc(value))
-  
-```
-_Filter by year_
-```{r}
-tourism_day_visits_activities_clean %>%
-  select(year,units,value,tourism_activity) %>% 
-  filter(year == 2019) %>% 
-  arrange(desc(year))
-```
-
- _Filter by year_  between 2019 -2013
-```{r}
-tourism_day_visits_activities %>%
-  select(date_code,units,value,tourism_activity) %>% 
-  filter(date_code == 2015) %>% 
-   arrange(desc(value))
-```
-
-
- Q2 _Which kind of activity generates the most visits to sites?_
- 
-```{r}
-tourism_day_visits_location_clean
-```
-```{r}
-tourism_day_visits_location_clean %>% 
-  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
-  filter(breakdown_of_domestic_tourism != 'Visits') %>% 
-  filter(year == 2014) %>% 
-   arrange(desc(value))
-```
- 
-```{r}
-tourism_day_visits_location_clean %>% 
-  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
-  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
-  filter(year == 2014) %>% 
-   arrange(desc(value))
-```
-
-It can be observed   that for the year 2019  visits and expenditure are correlated except for the values Village/Rural countryside. In happens as well in the year 2018, 2014
-
-
-
-Q8 _How have general tourism rates changed over time?_
-Q9 _Is there any way to predict spending and visits for Visit Scotland?_
-Predictions with the occupancy. As it was mentioned before the data covers mostly the period 2013- 2019. There are few problems to do a prediction. First, the most important is that we are in 2023 and in 2020 the methodology "substantial changes were introduced as part of a new combined online survey method collecting data on both domestic overnight trips as well as domestic day trips". This could imply different interpretations and results in Nights, Visits and Expenditure. The second , the china's present and pandemic and lockdown follow for a worldwide economic recession and the consequences after the invasion of Ukraine.
 
 
 _varios_
 
 
-# Understand the missing values = 'All' for the variable 'age' (224 from 308 = 72% !)
-
-```{r}
-tourism_day_visits_demmographics %>% 
-  filter(age == 'All') %>% 
-  count()
-```
-
-# Check 'age' groups
-```{r}
-
-tourism_day_visits_demmographics %>% 
-  group_by(age) %>%
-  count()
-```
 
 ```{r}
 tourism_day_visits_demmographics %>% 
@@ -148,15 +79,7 @@ scottish_accomodation_occupancy_clean %>%
   geom_bar(fill = "light blue", colour = "red")
 ```
 
-```{r}
-scottish_accomodation_occupancy_clean %>% 
-  ggplot(aes( x = accommodation_type_and_occupancy,fill = year), position = 'dodge')+
-  geom_bar()
-
-```
-
-
-geom_col ahora si hay x e y
+                    
                      _ANSWWERS_
                      
                      
@@ -193,6 +116,33 @@ tourism_day_visits_activities_clean %>%
  
 ```
 
+
+Q1 SECOND PART
+_What kind of tourism activity generates the highest income for Scotland?_
+
+TOURIST ACTIVITY highest income. There are data from 2013 CHECK THE DATA. Only inter
+
+```{r}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity) %>% 
+  arrange(desc(value))
+  
+```
+_Filter by year_
+```{r}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity) %>% 
+  filter(year == 2019) %>% 
+  arrange(desc(year))
+```
+
+ _Filter by year_  between 2019 -2013
+```{r}
+tourism_day_visits_activities %>%
+  select(date_code,units,value,tourism_activity) %>% 
+  filter(date_code == 2015) %>% 
+   arrange(desc(value))
+```
 
 
 
@@ -277,6 +227,29 @@ labs(
    scale_x_continuous(breaks = 2013:2019)+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+
+ Q2 _Which kind of activity generates the most visits to sites?_ /// SEGUNDA PARTE
+ 
+```{r}
+tourism_day_visits_location_clean
+```
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Visits') %>% 
+  filter(year == 2014) %>% 
+   arrange(desc(value))
+```
+ 
+```{r}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(year == 2014) %>% 
+   arrange(desc(value))
+```
+
+It can be observed   that for the year 2019  visits and expenditure are correlated except for the values Village/Rural countryside. In happens as well in the year 2018, 2014
 
 
 Q3 _Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_
@@ -592,8 +565,8 @@ The nights are possible related to what can you do there? The offer, obviously f
 
 
 Q7 _What type of accommodation is most popular? Is there a difference by location?_
-
-
+Viene Location of the accomodation pero no dicen de donde son los ocupantes.
+The answer is that it is prefered the hotel in each type of location but it depends the offer available. The data not reflect if the accommodation was during weekday or weekend. 
 ```{r}
 scottish_accomodation_occupancy_clean
 ```
@@ -602,15 +575,217 @@ scottish_accomodation_occupancy_clean
 scottish_accomodation_occupancy_clean %>% 
   group_by(accommodation_type_and_occupancy) %>% 
   summarise()
-  
 ```
+```{r}
+scottish_accomodation_occupancy_clean %>% 
+  group_by(weekday_weekend) %>% 
+  summarise()
+```
+
+during weekdays and weekends
 
 ```{r}
 scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location, weekday_weekend) %>% 
   filter(year == 2019) %>% 
+  filter(location == 'All') %>% 
+  filter(weekday_weekend == 'Weekend') %>% 
   group_by(accommodation_type_and_occupancy) %>% 
-  count(accommodation_type_and_occupancy)
- 
+  arrange(desc(value),accommodation_type_and_occupancy)
+```
+```{r}
+  scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location, weekday_weekend) %>% 
+  filter(year == 2019) %>% 
+  filter(location == 'All') %>% 
+  filter(weekday_weekend == 'Weekday') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy)
+```
+
+
+Note:/ question self-catering is rent a flat/  airB&B?
+The preference of the accommodation is linked to location and its offer available.
+
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location,weekday_weekend) %>% 
+  filter(year == 2019) %>% 
+  filter(location == 'Large Urban Areas') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy)
+```
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location) %>% 
+  filter(year == 2019) %>% 
+  filter(location == 'Accessible Small Towns') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy)
+```
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location) %>% 
+  filter(year == 2019) %>% 
+  filter(location == 'Other Urban Areas') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy)
+```
+
+
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location) %>% 
+  filter(year == 2019) %>% 
+  filter(location == 'Remote Rural') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy)
+```
+
+
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location) %>% 
+  filter(year == 2019) %>% 
+  filter(location == 'Accessible Rural') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy)
+```
+
+
+Q8 _How have general tourism rates changed over time?_
+
+
+ _OCCUPANCY_
+Change over the years, different size of the occupancy by its type
+```{r}
+#To avoid problems because there are too many points: group-by and summarise
+scottish_accomodation_occupancy_clean %>% 
+  group_by(accommodation_type_and_occupancy, year) %>% 
+  summarise( average_occupancy = mean(value)) %>% 
+ggplot(aes( x = year, y = average_occupancy, colour = accommodation_type_and_occupancy))+
+  geom_line() +
+  facet_wrap(~accommodation_type_and_occupancy, scales = 'free_y')+
+labs(
+    title = "GB Occupancy in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "Average occupancy\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2011:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+ _VISITS/LOCATIONS_
+In general we see there is a tendency to a slowly fall in the visits for all GB to Scotland. This fact is more clear in 'urban' areas or where it could be more visitors.
+
+```{r}
+tourism_day_visits_location_clean %>% 
+  filter(breakdown_of_domestic_tourism =='Visits') %>% 
+  group_by(type_of_location_visited, year) %>% 
+  summarise( average_visits = mean(value)) %>% 
+ggplot(aes( x = year, y = average_visits, colour = type_of_location_visited))+
+  geom_line() +
+  facet_wrap(~type_of_location_visited, scales = 'free_y')+
+labs(
+    title = "GB Visits in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "Average visits\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2011:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+_DEMOGRAPHICS_
+By age, each year is different, for 2019 the data show that mostly all the age groups falland the only two that grow significantly , 65 or older and 35-44 years old , are under the mark of their beat year that was 2016.
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(breakdown_of_domestic_tourism, age, value,year) %>% 
+  filter(age != 'All') %>% 
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  ggplot(aes( x = year, y = value, colour = age))+
+  geom_line()+
+  labs(
+    title = "GB Visitors Age in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "Average Thousand visits\n") +
+   scale_colour_brewer( palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)
+```
+_TRANSPORT_
+The car wins but b
+
+
+```{r}
+tourism_day_visits_transport_clean %>% 
+  select(method_of_travel,breakdown_of_domestic_tourism, value,year) %>% 
+  filter(method_of_travel != 'All') %>% 
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  ggplot(aes( x = year, y = value, colour = method_of_travel))+
+  geom_line()+
+  labs(
+    title = "GB Visitors Transport in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "millions visits\n") +
+   scale_x_continuous(breaks = 2013:2019)
+```
+
+```{r}
+tourism_day_visits_transport_clean %>% 
+  select(method_of_travel,breakdown_of_domestic_tourism, value,year) %>% 
+  filter(method_of_travel != 'All') %>% 
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  ggplot(aes( x = year, y = value, colour = method_of_travel))+
+  geom_line()+
+   facet_wrap(~method_of_travel, scales = 'free_y')+
+  labs(
+    title = "GB Visitors Transport in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "millions visits\n") +
+   scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+```{r}
+tourism_day_visits_transport_clean %>% 
+  select(method_of_travel,breakdown_of_domestic_tourism, value,year) %>% 
+  filter(method_of_travel != 'All') %>% 
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
+  ggplot(aes( x = year, y = value, colour = method_of_travel))+
+  geom_line()+
+   facet_wrap(~method_of_travel, scales = 'free_y')+
+  labs(
+    title = "GB Visitors Transport Expenditure in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "millions Pounds\n") +
+  # scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+
+
+
+
+Q9 _Is there any way to predict spending and visits for Visit Scotland?_
+Predictions with 'tourims_day_visits_location_clean.
+As it was mentioned before the data covers mostly the period 2013- 2019. There are few problems to do a prediction. First, the most important is that we are in 2023 and in 2020  "substantial changes were introduced as part of a new combined online survey method collecting data on both domestic overnight trips as well as domestic day trips". In my understanding this fact could imply different interpretations and results in Nights, Visits and Expenditure. The second , the china's present and pandemic and lockdown follow for a worldwide economic recession and the consequences after the invasion of Ukraine make less useful a comparison between the forecasting and the reality.
+HOWEVER, HOW SHOULD BE?   
+
+```{r}
+tourism_day_visits_demmographics_clean
+```
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(breakdown_of_domestic_tourism, age, value,year) %>% 
+  filter(age != 'All') %>% 
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  autoplot()
 ```
 
 
@@ -621,14 +796,8 @@ scottish_accomodation_occupancy_clean %>%
 
 
 
-
-
-
-
-
-
-
-
+_Extension_
+Decission Tree Age-expenditure
 
 
 
