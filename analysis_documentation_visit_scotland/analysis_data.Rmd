@@ -97,7 +97,7 @@ tourism_day_visits_activities_clean %>%
   labs(title =  'Value of the GB tourism for Scotland', subtitle = '2013 -2019 Income', x = 'Year', y = 'million pounds' )+
   scale_x_continuous(breaks = 2013:2019)
 ```
-
+Since 2013 the tourism
 Q1. Higest income for Scotland in 2019
 
 ```{r}
@@ -115,7 +115,7 @@ tourism_day_visits_activities_clean %>%
   coord_flip()
  
 ```
-
+ "S"pending 3 or more hours out of the home"
 
 Q1 SECOND PART
 _What kind of tourism activity generates the highest income for Scotland?_
@@ -264,11 +264,40 @@ tourism_day_visits_demmographics_clean
 
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
-  filter(year == 2019) %>% 
+  #filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =="Visits") %>% 
   filter(age != "All") %>% 
-  arrange(desc(value))
+  arrange(desc(value)) %>% 
+ggplot(aes( x = year, y = value, colour = age))+
+  geom_line() +
+  facet_wrap(~age, scales = 'free_y')+
+labs(
+    title = "GB Visits in Scotland between 2013 -2019",
+    x = "\nyear",
+    y = "millions visits\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  #filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =="Visits") %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value)) %>% 
+ggplot(aes( x = year, y = value, fill = age),position = 'stats')+
+  geom_col()+
+labs(
+    title = "GB Visits by Age in Scotland between 2013 -2019",
+    x = "\nyear",
+    y = "millions visits\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
 
 # Millions Expenditure by visitors age. More spend people between 25-34 , 55-56 and 35-44.
 
@@ -278,8 +307,36 @@ tourism_day_visits_demmographics_clean %>%
   filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
   filter(age != "All") %>% 
-  arrange(desc(value))
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = age, y = value))+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure by Age in Scotland 2019",
+    x = "\nAge",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")
 ```
+
+
+summarise?? para que salgan juntos todos los anos.
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  #filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = year, y = value), position = 'stats')+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure by Age in Scotland 2019",
+    x = "\nAge",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+    scale_x_continuous(breaks = 2013:2019)
+```
+
+
 
 Age or Gender. More Female than Male 
 
@@ -287,30 +344,98 @@ Age or Gender. More Female than Male
 tourism_day_visits_demmographics_clean %>% 
   filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  #filter(age != "All") %>% 
+  filter(gender != "All") %>% 
   filter(gender != "All" ) %>% 
-  arrange(desc(value))
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = gender, y = value ))+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure by Gender in Scotland 2019",
+    x = "\nAge",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")
 ```
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  #filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(gender != "All") %>% 
+  filter(gender != "All" ) %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = year, y = value ))+
+  geom_point(aes(colour = gender, shape = gender),size = 4)+
+labs(
+    title = "GB Expenditure by Gender in Scotland 2019",
+    x = "\nyear",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+    scale_x_continuous(breaks = 2013:2019)
+```
+
 # Marital Status
  And much more married than not married.
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
   filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  #filter(age != "All") %>% 
-  #filter(gender != "All" ) %>% 
   filter(marital_status !="All") %>% 
-  arrange(desc(value))
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = marital_status, y = value ))+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure by Gender in Scotland 2019",
+    x = "\nTaken",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")
 ```
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+ # filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(marital_status !="All") %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = year, y = value ))+
+  geom_point(aes(colour = marital_status, shape = marital_status),size = 4)+
+labs(
+    title = "GB Expenditure by marital_status in Scotland 2019",
+    x = "\nyear",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+    scale_x_continuous(breaks = 2013:2019)
+```
+
 # Childrens? NO! very interesting! 
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
   filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  #filter(age != "All") %>% 
-  #filter(gender != "All" ) %>% 
   filter(children !="All") %>% 
-  arrange(desc(value))
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = children, y = value ))+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure with Children in Scotland 2019",
+    x = "\nChildren",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")
+```
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  #filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(children !="All") %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = year, y = value ))+
+  geom_point(aes(colour = children, shape = children),size = 4)+
+labs(
+    title = "GB Expenditure with Children in Scotland 2019",
+    x = "\nYears",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+    scale_x_continuous(breaks = 2013:2019)
+
+    
 ```
 
 # Millions Expenditure by employment_status.
@@ -321,12 +446,42 @@ tourism_day_visits_demmographics_clean %>%
   select(area, year,measurement,units,value,breakdown_of_domestic_tourism,employment_status) %>% 
   filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
-  #filter(age != "All") %>% 
-  #filter(gender != "All" ) %>% 
-  #filter(marital_status !="All") %>% 
   filter(employment_status != "All") %>% 
-  arrange(desc(value))
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = employment_status, y = value ))+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure By employment_status in Scotland 2019",
+    x = "\n Employment Status",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")
 ```
+
+
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,employment_status) %>% 
+  #filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(employment_status != "All") %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = year, y = value ))+
+  geom_point(aes(colour = employment_status, shape = employment_status),size = 4)+
+  labs(
+    title = "GB Expenditure By employment_status in Scotland 2019",
+    x = "\n Employment Status",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+    scale_x_continuous(breaks = 2013:2019)
+```
+
+
+
+
+
+
+
 Is important the social grade? Is ethical?Funny the most expenditure is the highest grade occupation but the second is in theory the lowest grade occupation ( less money/ less cultured person? assumption)
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
@@ -781,11 +936,16 @@ tourism_day_visits_demmographics_clean
 ```
 
 ```{r}
-tourism_day_visits_demmographics_clean %>% 
-  select(breakdown_of_domestic_tourism, age, value,year) %>% 
-  filter(age != 'All') %>% 
-  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
-  autoplot()
+predict_spend %>% 
+  filter(tourism_activity == 'All') %>% 
+  ggplot()+
+  geom_line(aes(x = year, y = value ), colour = "blue")+
+  labs(
+    title = "GB  Expenditure in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "millions Pounds\n") +
+   scale_x_continuous(breaks = 2013:2019)
+
 ```
 
 

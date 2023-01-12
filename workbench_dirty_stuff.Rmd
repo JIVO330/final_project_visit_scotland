@@ -7,6 +7,7 @@ output: html_notebook
 library(tidyverse)
 library(janitor)
 library(tsibble)
+library(fable)
 library(lubridate)
 ```
 
@@ -61,12 +62,7 @@ labs(
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-```{r}
-scottish_accomodation_occupancy_clean %>% 
-  select(year, value,accommodation_type_and_occupancy) %>% 
-  ggplot(aes( x = year, y = value,group = accommodation_type_and_occupancy, colour =        accommodation_type_and_occupancy))+
-  geom_line()
-```
+
 
 ```{r}
 scottish_accomodation_occupancy_clean %>% 
@@ -87,7 +83,7 @@ ggplot(aes( x = year, y = average_visits, colour = type_of_location_visited))+
   geom_line() +
   facet_wrap(~type_of_location_visited, scales = 'free_y')+
 labs(
-    title = "GB Visits in Scotland between 2011 -2019",
+    title = "GB Visits By Location in Scotland between 2011 -2019",
     x = "\nYear",
     y = "Average visits\n") +
     scale_colour_brewer(guide = "none", palette = "Set2")+
@@ -118,8 +114,21 @@ _TRANSPORT_
 
 ```{r}
 tourism_day_visits_transport_clean %>% 
-  filter(breakdown_of_domestic_tourism == 'Visits')
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  filter(method_of_travel != 'All') %>% 
+  filter(year == 2019) %>% 
+  ggplot(aes( x = method_of_travel, y = value))+
+  geom_col(fill = "light blue", colour = "red")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  labs(
+    title = "GB Visits transport in Scotland between 2011 -2019",
+    x = "\nMethod of Travel",
+    y = "Millions visits\n")
 ```
+
+
+
+
 
 
 ```{r}
@@ -153,7 +162,6 @@ tourism_day_visits_transport_clean %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-
 ```{r}
 tourism_day_visits_transport_clean %>% 
   select(method_of_travel,breakdown_of_domestic_tourism, value,year) %>% 
@@ -166,7 +174,6 @@ tourism_day_visits_transport_clean %>%
     title = "GB Visitors Transport Expenditure in Scotland between 2011 -2019",
     x = "\nYear",
     y = "millions Pounds\n") +
-  # scale_colour_brewer(guide = "none", palette = "Set2")+
    scale_x_continuous(breaks = 2013:2019)+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
@@ -184,11 +191,17 @@ tourism_day_visits_transport_clean %>%
     title = "GB Visitors Transport Expenditure in Scotland between 2011 -2019",
     x = "\nYear",
     y = "millions Pounds\n") +
-   #scale_colour_brewer(guide = "none", palette = "Set2")+
    scale_x_continuous(breaks = 2013:2019)+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+
 Q9
+
+Spending/ Visits
+```{r}
+tourism_day_visits_activities_clean
+```
+
 
 ```{r}
 predict_spend <- tourism_day_visits_activities_clean
@@ -196,21 +209,50 @@ predict_spend
 ```
 
 
-My year is not a date is number Should I change to date?
+My year is not a date is number Should I change to date? NO necessary. How to change my tibble to a tsibble for prediction
 
 ```{r}
-predict_spend %>% 
+predict_spend <- predict_spend %>% 
   select(year, breakdown_of_domestic_tourism,tourism_activity,value = value) %>% 
   filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
-  group_by(year,tourism_activity) %>% 
-  as_tsibble(index = year )
+  #tibble::rowid_to_column() %>% 
+  # mutate(year = as.Date(year, '2011-01-01')) %>% 
+  #group_by(year,tourism_activity) %>% 
+  as_tsibble(index = year, key = tourism_activity )
+predict_spend
 ```
 
 ```{r}
 predict_spend %>% 
-  mutate(year = year(year))
+  filter(tourism_activity == 'All') %>% 
+  ggplot()+
+  geom_line(aes(x = year, y = value ), colour = "blue")+
+  labs(
+    title = "GB  Expenditure in Scotland between 2013 -2019",
+    x = "\nYear",
+    y = "millions Pounds\n") +
+   scale_x_continuous(breaks = 2013:2019)
 ```
 
+predict_visits.
+```{r}
+predict_visits <- tourism_day_visits_activities_clean
+```
+```{r}
+predict_visits %>% 
+  select(year, breakdown_of_domestic_tourism,tourism_activity,value = value) %>% 
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+   filter(tourism_activity == 'All') %>% 
+  ggplot()+
+  geom_line(aes(x = year, y = value ), colour = "blue")+
+  labs(
+    title = "GB Total Tourism Activity Visits in Scotland between 2013 -2019",
+    x = "\nYear",
+    y = "millions Visits\n") +
+   scale_x_continuous(breaks = 2013:2019)
+```
+
+There were a peak in 2017 in visits to tourism_activity and expenditure, after there are a decrease in total number of visits but a decrease in expenditure. That could means an increase of price of the activities, less offer?. Less tourism but more money or visitors with more/ higher purchasing power
 
 
 
@@ -226,21 +268,93 @@ predict_spend %>%
 
 
 
-_Extension_
-Decission Tree Age-Expenditure
+
+
+
+
 
 ```{r}
+scottish_accomodation_occupancy_clean %>% 
+  ggplot(aes( x = accommodation_type_and_occupancy))+
+  geom_bar(fill = "light blue", colour = "red")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+
+Prediction - Not enough data to do a prediction.
+```{r}
+predict_spend %>% 
+  select(year, value, tourism_activity) %>% 
+  filter(tourism_activity == 'All') %>% 
+  autoplot()+
+  labs(
+    title = "GB  Expenditure in Scotland between 2013 -2019",
+    x = "\nYear",
+    y = "millions Pounds\n") +
+   scale_x_continuous(breaks = 2013:2019)
+```
+
+```{r}
+fit <- predict_spend %>%
+  model(
+    snaive = SNAIVE(predict_spend),
+    mean_model = MEAN(predict_spend),
+    arima = ARIMA(predict_spend)
+  )
+```
+
+```{r}
+fit
+```
+```{r}
+forecast_1 <- fit %>%
+  fabletools::forecast(h = 12)
+forecast_1
+```
+```{r}
+forecast_1 %>%
+  autoplot(predict_spend) +
+  ggtitle("Forecasts for Australian beer sales") +
+ # xlab("Year") +
+  guides(colour = guide_legend(title = "Forecast"))
+```
+
+Subseries- No work. Not enough data
+```{r}
+predict_spend %>% 
+  filter(tourism_activity == 'All') %>% 
+  gg_subseries(tourism_activity)
+```
+Rolling Window -Impossible not enough data
+```{r}
+library(slider)
+```
+
+```{r}
+predict_spend %>% 
+  filter(tourism_activity == 'All') %>% 
+  mutate(
+    value_moving_avg = slide_dbl(.x = value,.f = ~ mean(., na.rm = TRUE),.before = 1000, .after = 1000)) %>%
+    ggplot()+
+   geom_line(aes(x = year, y = value), colour = "grey") + 
+   geom_line(aes(x = year, y = value_moving_avg), colour = "red")
+```
+
+_Extension_
+Decission Tree Age-Expenditure Doenst work because you need 10 thousand rows/ observations
+
+```{r}
 library(rpart)
 library(rpart.plot)
-
 ```
+
 ```{r}
 tourism_day_visits_demmographics_clean
 ```
+
 ```{r}
 demmographics_age_expenditure <- tourism_day_visits_demmographics_clean %>% 
-  select(year, value, breakdown_of_domestic_tourism,age) %>% 
+  select(year, value, breakdown_of_domestic_tourism,age,) %>%
   filter(age != 'All') %>% 
   filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
   group_by(year)
