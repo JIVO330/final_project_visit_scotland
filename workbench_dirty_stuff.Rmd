@@ -261,6 +261,45 @@ There were a peak in 2017 in visits to tourism_activity and expenditure, after t
 
 
 
+Try to do a grouped barchart
+Group barchart by ocupation type
+
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location, weekday_weekend) %>% 
+  filter(year == 2019) %>% 
+  filter(location == 'All') %>% 
+  filter(weekday_weekend != 'All') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy) %>% 
+  ggplot(aes(fill= weekday_weekend, y=value, x=accommodation_type_and_occupancy)) + 
+    geom_bar(position="dodge", stat="identity")+
+ labs(
+    title = "Occupancy by Accomodation Type in Scotland  in 2019",
+    x = "\n Accomodation Type",
+    y = "Percentage Over Total Occupancy\n") +
+   #scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 25, hjust = 1))
+```
+Group barchart by  total occupation period time
+
+```{r}
+scottish_accomodation_occupancy_clean %>%
+  select(area,year,value,accommodation_type_and_occupancy,location, weekday_weekend) %>% 
+  #filter(accomodation_type_and_occupancy == 'All') %>% 
+  filter(location == 'All') %>% 
+  filter(weekday_weekend != 'All') %>% 
+  group_by(accommodation_type_and_occupancy) %>% 
+  arrange(desc(value),accommodation_type_and_occupancy) %>% 
+  ggplot(aes(fill= weekday_weekend, y=value, x=year)) + 
+    geom_bar(position="dodge", stat="identity")+
+ labs(
+    title = " total Occupancy  in Scotland period 2011- 2019",
+    x = "\n Accomodation Type",
+    y = "Percentage Over Total Occupancy\n") +
+   scale_x_continuous(breaks = 2011:2019)+
+  theme(axis.text.x = element_text(angle = 25, hjust = 1))
+```
 
 
 
@@ -270,6 +309,11 @@ There were a peak in 2017 in visits to tourism_activity and expenditure, after t
 
 
 
+
+
+
+
+       _MORE SHIT_
 
 
 

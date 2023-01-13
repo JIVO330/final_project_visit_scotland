@@ -99,7 +99,8 @@ dates used,
 
 
 
-## Tourism in Scotland. Q1 -Slide
+## Tourism in Scotland. Q1 -Slide Which tourist Activities are survey?
+
 
 
 
@@ -243,4 +244,8 @@ Q5 _Is there a particular method of travel our visitors arrive by? Some of our l
 
 
 
+_Recommendations_
 
+Improuve the survey and join data so it can be possible to show/ investigate which activity is more visit and therefore more suitable. 
+Understand the importance of tourism in the general economy, not index more in pounds. domestic and international
+for groups of people like age or families( children)
