@@ -259,7 +259,7 @@ There were a peak in 2017 in visits to tourism_activity and expenditure, after t
 
 
 
-
+Q7
 
 Try to do a grouped barchart
 Group barchart by ocupation type
@@ -275,12 +275,15 @@ scottish_accomodation_occupancy_clean %>%
   ggplot(aes(fill= weekday_weekend, y=value, x=accommodation_type_and_occupancy)) + 
     geom_bar(position="dodge", stat="identity")+
  labs(
-    title = "Occupancy by Accomodation Type in Scotland  in 2019",
+    title ="Occupancy by Accomodation Type in Scotland  in 2019",
     x = "\n Accomodation Type",
     y = "Percentage Over Total Occupancy\n") +
-   #scale_x_continuous(breaks = 2013:2019)+
-  theme(axis.text.x = element_text(angle = 25, hjust = 1))
+   coord_flip()+
+  theme_update(plot.title = element_text(hjust = 1))
 ```
+Cheap travels for long weekends.
+Note: difference Room and Bed occupancy, no clear but I  understand that Room means the number of occupants per room but Bed  means the number of occupants in a room per size bed = 1 single bed and 1 double bed  means 3 max occupants
+
 Group barchart by  total occupation period time
 
 ```{r}
@@ -294,7 +297,7 @@ scottish_accomodation_occupancy_clean %>%
   ggplot(aes(fill= weekday_weekend, y=value, x=year)) + 
     geom_bar(position="dodge", stat="identity")+
  labs(
-    title = " total Occupancy  in Scotland period 2011- 2019",
+    title = " Total Occupancy  in Scotland period 2011- 2019",
     x = "\n Accomodation Type",
     y = "Percentage Over Total Occupancy\n") +
    scale_x_continuous(breaks = 2011:2019)+

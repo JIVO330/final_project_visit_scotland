@@ -246,6 +246,8 @@ Q5 _Is there a particular method of travel our visitors arrive by? Some of our l
 
 _Recommendations_
 
-Improuve the survey and join data so it can be possible to show/ investigate which activity is more visit and therefore more suitable. 
-Understand the importance of tourism in the general economy, not index more in pounds. domestic and international
-for groups of people like age or families( children)
+Improve the survey and join data so it can be possible to show/ investigate which activity is more visit and therefore more suitable for each group age/status..for groups of people like age or families( children).
+Understand the importance of tourism in the general economy, not index more in pounds. the data only reflect the domestic visitor but not the international.
+There are no enough information to combine 'tourism activity' and 'type of location visited'.
+Issues : the year is an average of 3 years , All GB means England, Scotland and Wales. But its only, Scotland and England in observations but not Wales and its difficult to substract  this country from 'All GB' has to improve the Wales survey
+Improve the International visits/ Expenditure

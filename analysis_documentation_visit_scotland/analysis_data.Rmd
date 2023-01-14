@@ -128,6 +128,7 @@ tourism_day_visits_activities_clean %>%
   arrange(desc(value))
   
 ```
+
 _Filter by year_
 ```{r}
 tourism_day_visits_activities_clean %>%
@@ -190,7 +191,7 @@ tourism_day_visits_location_clean %>%
   ylab('million pounds' )+
   coord_flip()
 ```
- 
+ -Answer_ Correlation between area visited and millions pounds expenditure for 2019
  From 2013 to 2019
  
 ```{r}
@@ -227,8 +228,11 @@ labs(
    scale_x_continuous(breaks = 2013:2019)+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+_Answer_ this voisualization see the evolution for the period 2013 - 2019 the visits in city/ large town has fallen but the expenditure there has increase in the last year. the Rural countryside shows the opposite the expenditure has decrease but  the visits has increase from 2018.
 
- Q2 _Which kind of activity generates the most visits to sites?_ /// SEGUNDA PARTE
+It can be observed   that for the year 2019  visits and expenditure are correlated except for the values Village/Rural countryside. In happens as well in the year 2018, 2014
+
+ Q2 _Which kind of activity generates the most visits to sites?_ /// SECOND PART- REPETITION
  
 ```{r}
 tourism_day_visits_location_clean
@@ -249,7 +253,6 @@ tourism_day_visits_location_clean %>%
    arrange(desc(value))
 ```
 
-It can be observed   that for the year 2019  visits and expenditure are correlated except for the values Village/Rural countryside. In happens as well in the year 2018, 2014
 
 
 Q3 _Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?_
@@ -279,23 +282,40 @@ labs(
    scale_x_continuous(breaks = 2013:2019)+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-
+There is not a general tendency each group of age had a prefered year  in visit scotland
 
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
-  #filter(year == 2019) %>% 
+  filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =="Visits") %>% 
   filter(age != "All") %>% 
   arrange(desc(value)) %>% 
-ggplot(aes( x = year, y = value, fill = age),position = 'stats')+
-  geom_col()+
+ggplot(aes( x = age, y = value,fill = 'light blue'))+
+     geom_col(fill = "light blue",
+           position = 'dodge')+
+labs(
+    title = "GB Visits in Scotland in 2019",
+    x = "\nAge",
+    y = "millions visits\n") +
+  coord_flip()+
+  theme_update(plot.title = element_text(hjust = 0.5))
+```
+
+Years- Age-Millions
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  filter(breakdown_of_domestic_tourism =="Visits") %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value)) %>% 
+ggplot(aes( x = year, y = value, fill = age, label = value))+
+  geom_bar(stat = 'identity')+
+  geom_text(size = 3, position = position_stack(vjust = 0.5))+
 labs(
     title = "GB Visits by Age in Scotland between 2013 -2019",
     x = "\nyear",
-    y = "millions visits\n") +
-    scale_colour_brewer(guide = "none", palette = "Set2")+
-   scale_x_continuous(breaks = 2013:2019)+
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+    y = "Millions visits\n") +
+   scale_x_continuous(breaks = 2013:2019)
 ```
 
 
@@ -322,23 +342,20 @@ summarise?? para que salgan juntos todos los anos.
 
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
-  #filter(year == 2019) %>% 
-  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(breakdown_of_domestic_tourism =="Expenditure") %>% 
   filter(age != "All") %>% 
   arrange(desc(value)) %>% 
-  ggplot(aes( x = year, y = value), position = 'stats')+
-  geom_col(fill = "light blue")+
+ggplot(aes( x = year, y = value, fill = age, label = value))+
+  geom_bar(stat = 'identity')+
+  geom_text(size = 3, position = position_stack(vjust = 0.5))+
 labs(
-    title = "GB Expenditure by Age in Scotland 2019",
-    x = "\nAge",
-    y = "millions Pounds\n") +
-    scale_colour_brewer(guide = "none", palette = "Set2")+
-    scale_x_continuous(breaks = 2013:2019)
+    title = "GB Expenditure by Age in Scotland between 2013 -2019",
+    x = "\nyear",
+    y = "Millions expenditure\n") +
+   scale_x_continuous(breaks = 2013:2019)
 ```
 
-
-
-Age or Gender. More Female than Male 
+ Gender. More Female than Male 
 
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
@@ -355,7 +372,7 @@ labs(
     y = "millions Pounds\n") +
     scale_colour_brewer(guide = "none", palette = "Set2")
 ```
-
+_Answer_ Spend more Female than Male in 2019
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
   #filter(year == 2019) %>% 
@@ -369,10 +386,10 @@ labs(
     title = "GB Expenditure by Gender in Scotland 2019",
     x = "\nyear",
     y = "millions Pounds\n") +
-    scale_colour_brewer(guide = "none", palette = "Set2")+
+    #(guide = "none", palette = "Set2")+
     scale_x_continuous(breaks = 2013:2019)
 ```
-
+_Answer_ From records always spend more female and male
 # Marital Status
  And much more married than not married.
 ```{r}
@@ -389,6 +406,7 @@ labs(
     y = "millions Pounds\n") +
     scale_colour_brewer(guide = "none", palette = "Set2")
 ```
+_answer_ More married than no married
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
  # filter(year == 2019) %>% 
@@ -401,7 +419,7 @@ labs(
     title = "GB Expenditure by marital_status in Scotland 2019",
     x = "\nyear",
     y = "millions Pounds\n") +
-    scale_colour_brewer(guide = "none", palette = "Set2")+
+    #scale_colour_brewer(guide = "none", palette = "Set2")+
     scale_x_continuous(breaks = 2013:2019)
 ```
 
@@ -420,6 +438,7 @@ labs(
     y = "millions Pounds\n") +
     scale_colour_brewer(guide = "none", palette = "Set2")
 ```
+_Answer_ Spend more without Kids in 2019
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
   #filter(year == 2019) %>% 
@@ -429,14 +448,12 @@ tourism_day_visits_demmographics_clean %>%
   ggplot(aes( x = year, y = value ))+
   geom_point(aes(colour = children, shape = children),size = 4)+
 labs(
-    title = "GB Expenditure with Children in Scotland 2019",
+    title = "GB Expenditure with Children in Scotland for the period 2013-2019",
     x = "\nYears",
     y = "millions Pounds\n") +
-    scale_colour_brewer(guide = "none", palette = "Set2")+
     scale_x_continuous(breaks = 2013:2019)
-
-    
 ```
+_Answer_ Spend more without Kids in all years
 
 # Millions Expenditure by employment_status.
 The gross part is, obviously, spend by employed / self-employed persons. We can questioning about the consequences about the fact that 715 millions are spend by unemployed or not working people, maybe this total amount is the reflection of students plus retired people. Segun los datos hay 998 millones que no se saben donde estan o que no han respondido
@@ -456,31 +473,24 @@ labs(
     y = "millions Pounds\n") +
     scale_colour_brewer(guide = "none", palette = "Set2")
 ```
-
+_Answer_ for 2019 is obvious that the weitgh of spend is in the working group, but the other 2 groups means 500 millions of pounds, is a lot money?
 
 
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
   select(area, year,measurement,units,value,breakdown_of_domestic_tourism,employment_status) %>% 
-  #filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
   filter(employment_status != "All") %>% 
   arrange(desc(value)) %>% 
   ggplot(aes( x = year, y = value ))+
   geom_point(aes(colour = employment_status, shape = employment_status),size = 4)+
   labs(
-    title = "GB Expenditure By employment_status in Scotland 2019",
+    title = "GB Expenditure By Employment Status in Scotland 2019",
     x = "\n Employment Status",
     y = "millions Pounds\n") +
-    scale_colour_brewer(guide = "none", palette = "Set2")+
     scale_x_continuous(breaks = 2013:2019)
 ```
-
-
-
-
-
-
+_Answer_ Obvious plot.
 
 Is important the social grade? Is ethical?Funny the most expenditure is the highest grade occupation but the second is in theory the lowest grade occupation ( less money/ less cultured person? assumption)
 ```{r}
@@ -489,9 +499,34 @@ tourism_day_visits_demmographics_clean %>%
   filter(year == 2019) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
   filter(social_grade != "All") %>% 
-  arrange(desc(value))
+  arrange(desc(value)) %>% 
+ ggplot(aes( x = social_grade, y = value ))+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure By Socil Grade in Scotland 2019",
+    x = "\n Social Grade",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")
 ```
-Answer. so young couples, maybe more females  with good salaries and no children
+
+```{r}
+tourism_day_visits_demmographics_clean %>% 
+  select(area, year,measurement,units,value,breakdown_of_domestic_tourism,social_grade) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(social_grade != "All") %>% 
+  arrange(desc(value)) %>% 
+ ggplot(aes( x = year, y = value ))+
+   geom_point(aes(colour = social_grade, shape = social_grade),size = 4)+
+  labs(
+    title = "GB Expenditure By Social Grade in Scotland period 2013 - 2019",
+    x = "\n Social Grade",
+    y = "millions Pounds\n") +
+    scale_x_continuous(breaks = 2013:2019)
+```
+The obvious for social grade but not the last year. Is it ethical?
+
+
+_Answer_. so Young couples, maybe more females  with good salaries/ highest employment status, high social grade and no children (yet)
 
 
 Q4 _What type of locations receive the most visits? What kinds of locations do people spend the most in?_ 
@@ -511,6 +546,7 @@ visit_sites_activity %>%
   filter(year ==2013) %>% 
   arrange(year, tourism_activity)
 ```
+
 There is a 'problem' the maths doesnt work for 2013  the 124 million visits 'All areas' is unequal to the sum of different locations. Without filter NA there are a lot of more information = millions visits lost. I show the first one by year and the first one with tourism activity.
 
 
@@ -561,6 +597,18 @@ visit_sites_activity %>%
 Total vale of All "types_of_location_visited" (124) is different to the independent sum of the each value, check what they say in the web. But I think the answer is that one person can visited multiple location. It is the same even you dont filter NA.  
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 Q5 _Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have_
 
   In my opinion the data mix to important questions how they arrive to Scotland and how they move around Scotland.
@@ -577,7 +625,7 @@ tourism_day_visits_transport_clean %>%
   arrange(desc(value))
 ```
 
-There are feew things interesting, 0.5 million visitis arrive by see(boat/ship/ ferry) where is cruise is boat a cruise? ship and ferry can include go to the Islands? only 0.4 take a caravan or campervan but the value of their spend is 24.2 millions of pounds 
+There are few things interesting, 0.5 million visitis arrive by see(boat/ship/ ferry) where is cruise is boat a cruise? ship and ferry can include go to the Islands? only 0.4 take a caravan or campervan but the value of their spend is 24.2 millions of pounds. We can conclude that is minimum visits some Islands such as Mull, Islay, Arran, others such as western Islands , Orkney or Shetlands have airports. Visit  the Islands imply more nights and more expenses
 
 
 ```{r}
@@ -593,8 +641,6 @@ tourism_day_visits_transport_clean %>%
   xlab('Method of travel' )+
   ylab('million visit' )+
   coord_flip()
-
-
 ```
 
 
@@ -680,7 +726,7 @@ regional_domestic_tourism_clean %>%
   coord_flip()
   
 ```
-What could we deduce? it is not how to arrive, the west Hebridies ( Na h-Elleanan Siar) is over regions of the 'Central bell' it is the offer fro activities
+What could we deduce? it is not how to arrive, the Western Islands ( Na h-Elleanan Siar) is over regions of the 'Central bell' it is the offer fro activities
 
 
 ```{r}

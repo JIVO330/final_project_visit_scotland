@@ -1,7 +1,7 @@
 ---
 title: "Visit Scotland"
 author: "Juan Ignacio De Vicente Ojeda"
-date: "2023-01-09"
+date: "`r Sys.Date()`"
 output:
   slidy_presentation: default
   ioslides_presentation: default
@@ -55,18 +55,5 @@ plot(pressure)
 ```
 
 ##Prueba slide
-```{r, echo=FALSE}
-tourism_day_visits_activities_clean %>%
-  select(year,units,value,tourism_activity) %>%
-  filter(tourism_activity != 'All') %>% 
-  filter(year == 2019) %>% 
-  arrange(desc(year)) %>% 
-   ggplot(aes( x =reorder(tourism_activity,value), y = value))+
-  geom_col(fill = "light blue", #colour = "purple",
-           position = 'dodge')+
-  labs(title = '2019 Highest income' )+
-  xlab('tourism activity' )+
-  ylab('million pounds' )+
-  coord_flip()
-```
+
 
