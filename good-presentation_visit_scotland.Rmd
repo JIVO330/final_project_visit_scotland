@@ -323,7 +323,7 @@ labs(
 ```
 
 ## Marital Status in 2019
- The level of expenditure is higher in married than not married. Could be the result of to Have two salaries.
+ The level of expenditure is higher in married than not married. Could be the result of to have two salaries.
  (Could be an ethical consideration - why/ How the spend the money-)
 ```{r}
 tourism_day_visits_demmographics_clean %>% 
@@ -415,7 +415,7 @@ labs(
 
 
 ##
-```{r}
+```{r echo = FALSE}
 tourism_day_visits_demmographics_clean %>% 
   select(area, year,measurement,units,value,breakdown_of_domestic_tourism,employment_status) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
@@ -434,7 +434,7 @@ tourism_day_visits_demmographics_clean %>%
 ## SocialGrade
 
 Is important the social grade? Is ethical? Obviously, the most expenditure is the highest social grade but the second is in theory the lowest social grade. Another ethical consideration/ assumption. Is it  the less cultured person equal to less money or easy to spend it?
-```{r}
+```{r echo = FALSE}
 tourism_day_visits_demmographics_clean %>% 
   select(area, year,measurement,units,value,breakdown_of_domestic_tourism,social_grade) %>% 
   filter(year == 2019) %>% 
@@ -454,7 +454,7 @@ labs(
 ## For the period 2013 - 2019
 
 The obvious for social grade but not the last year. Is it ethical? 'help' people to spend money
-```{r}
+```{r echo =FALSE}
 tourism_day_visits_demmographics_clean %>% 
   select(area, year,measurement,units,value,breakdown_of_domestic_tourism,social_grade) %>% 
   filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
@@ -471,7 +471,7 @@ tourism_day_visits_demmographics_clean %>%
 
 ##In conclusion
 
- The data point out that the profile person that spend more money  is a young / middle- age female married - maybe recently- without children with employ and high social grade
+ The data point out that the profile person that spend more money  is a young / middle- age female married - maybe recently- without children with employ
 
 ## Transport means where to go, free to travel....
  
@@ -480,7 +480,7 @@ tourism_day_visits_demmographics_clean %>%
  
 ## GB Visits by travel method in 2019
 
-```{r}
+```{r echo =FALSE}
  tourism_day_visits_transport_clean %>% 
     filter(year == 2019) %>% 
     filter(breakdown_of_domestic_tourism =='Visits') %>% 
@@ -560,7 +560,7 @@ tourism_day_visits_transport_clean %>%
 ```
  
 
-## Where they paying out
+## Where people paying out
 
   The data confirms that they are the cities and the large towns (Edinburgh and Glasgow) and the Highlands the places of most expenditure. Places in relation with the use of car and train as a main transport.
 ```{r}

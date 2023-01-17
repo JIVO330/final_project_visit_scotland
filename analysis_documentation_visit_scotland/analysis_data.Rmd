@@ -1248,7 +1248,8 @@ predict_spend %>%
 predict_visits.
 ```{r}
 predict_visits <- tourism_day_visits_activities_clean
-```
+``
+`
 ```{r}
 predict_visits %>% 
   select(year, breakdown_of_domestic_tourism,tourism_activity,value = value) %>% 
