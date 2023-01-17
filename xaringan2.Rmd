@@ -35,7 +35,7 @@ tourism_day_visits_demmographics_clean <- read_csv("clean_data/tourism_day_visit
 tourism_day_visits_location_clean <- read_csv("clean_data/tourism_day_visits_location_clean.csv")
 tourism_day_visits_transport_clean <- read_csv("clean_data/tourism_day_visits_transport_clean.csv")
 visit_sites_activity <-  read_csv("clean_data/visit_sites_activity.csv")
-# predict_spend <- tourism_day_visits_activities_clean
+ predict_spend <- tourism_day_visits_activities_clean
 # predict_spend <- predict_spend %>% 
 #   select(year, breakdown_of_domestic_tourism,tourism_activity,value = value) %>% 
 #   filter(breakdown_of_domestic_tourism == 'Expenditure')
@@ -59,7 +59,7 @@ class: middle, center
 
 The aim of this presentation is to show a quick glimpse about the domestic tourist sector between the years 2011 and 2019 in Scotland.Specially the value of visits and the expenditure.
 
-In order to conduct this premise, it had been used the the open data offer by 'Visit Scotland' that can be consult in the website of the Scottish Government : 'statistics.gov.scot'
+In order to conduct this premise, it had been used the open data offer by 'Visit Scotland' that can be consult in the website of the Scottish Government : 'statistics.gov.scot'
 
 It is understood by domestic tourist  the person which reside in Great Britain
 
@@ -70,7 +70,7 @@ It is understood by domestic tourist  the person which reside in Great Britain
 
  Before start, it has to be some considerations.
  
-- Some of the data used presented the variable 'region of residence', and observations are  'All GB', 'England' and 'Scotland'.  Due the fact that GB means England, Scotland and Wales,it has been used the  'All GB' observation because - in our opinion- should be the most accurate.
+- Some of the data used presented the variable 'region of residence'. Its observations are  'All GB', 'England' and 'Scotland'.  Due the fact that GB means England, Scotland and Wales,it has been used the  'All GB' observation because - in our opinion- should be the most accurate.
 
 - Also one visitor can realize more than one visits. This  fact could lead to a misinterpretation in the total number of visits and visitors.
 
@@ -119,7 +119,7 @@ tourism_day_visits_activities_clean %>%
 ]
 ---
 
-We  can see which are the Tourism Activity and their income in the total value for the year 2019
+These are the Tourism Activity and their value for the year 2019.
 "Went out for a meal" was the highest Income. One thing you can do once per week but not 'very regularly'.
 ```{r,echo = FALSE}
 tourism_day_visits_activities_clean %>%
@@ -143,7 +143,7 @@ tourism_day_visits_activities_clean %>%
 ## However..
 
 The higher number of visits for the same year was...
-visit friends or family for leisure (tourism activities?)
+'visit friends or family for leisure' (tourism activities?)
 ```{r ,echo = FALSE}
 tourism_day_visits_activities_clean %>% 
   filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
@@ -196,11 +196,12 @@ tourism_day_visits_location_clean %>%
   coord_flip()
 ```
 
+
 ---
 
 ## But
 
-Even if the City or large town attract the majority of visits and expenditure.From 2017 there is a - relative- decrease in comparison with other locations such as countryside or seaside in the number of visits.
+Although the City /large town attract the majority of visits and expenditure.From 2017 there is a - relative- decrease  in the number of visits.
 ```{r echo = FALSE}
 tourism_day_visits_location_clean %>% 
   select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
@@ -220,7 +221,10 @@ labs(
 
 ---
 ## Visitors by age between 2013-2019
+.pull-left[
 It can argue that there is not a clear tendency, each group of age had a preferred year in visit Scotland. With a clear decline from 2017 except for 35-44 and 65 and over.
+]
+.pull-right[
 ```{r echo = FALSE}
 tourism_day_visits_demmographics_clean %>% 
   select(breakdown_of_domestic_tourism, age, value,year) %>% 
@@ -235,7 +239,7 @@ tourism_day_visits_demmographics_clean %>%
    scale_colour_brewer( palette = "Set2")+
    scale_x_continuous(breaks = 2013:2019)
 ```
-
+]
 ---
 ## 
 Millions Expenditure by visitors age. More spend people between 25-34 , 35 - 44 and 55-56.
@@ -469,16 +473,17 @@ scottish_accomodation_occupancy_clean %>%
 ## Predictions 
 
 As it was mentioned before the data covers mostly the period 2013- 2019.
--There are few problems to do a prediction. First, the most important is that we are in 2023 and in 2020 and from2019 there is a "substantial changes were introduced as part of a new combined online survey method collecting data on both domestic overnight trips as well as domestic day trips". In my understanding this fact could imply different interpretations and results in Nights, Visits and Expenditure. 
+There are few problems to do a prediction.
+-First, the most important is that we are in 2023 and in 2020 and from2019 there is a "substantial changes were introduced as part of a new combined online survey method collecting data on both domestic overnight trips as well as domestic day trips". In my understanding this fact could imply different interpretations and results in Nights, Visits and Expenditure. 
 
 -The second , the china's present and pandemic and lockdown follow for a worldwide economic recession and the consequences after the invasion of Ukraine make less useful a comparison between the forecasting and the reality.
 
-
+-Third and more important, the data available made unrealistic the idea of a strong prediction. 
 ---
 
 ## Visits
 For the years 2018 and 2019 there were a decrease in visits and in a normal circumstances , it would logic speak in a slowly decrease or a dramatic increase like between the years 2015 and 2017. It could refereed  as 'brexit times'
-```{r}
+```{r echo = FALSE}
 predict_visits %>% 
   select(year, breakdown_of_domestic_tourism,tourism_activity,value = value) %>% 
   filter(breakdown_of_domestic_tourism == 'Visits') %>% 
@@ -493,12 +498,13 @@ predict_visits %>%
 ```
 
 ---
-##
+
 There were a peak in 2017 in visits to tourism_activity and expenditure, after there are a decrease in total number of visits but a decrease in expenditure. That could means an increase of price of the activities, less offer?. Less tourism but more money or visitors with more/ higher purchasing power
 
-```{r}
-predict_spend %>% 
-  filter(tourism_activity == 'All') %>% 
+```{r echo = FALSE}
+predict_spend %>%
+  filter(tourism_activity == 'All') %>%
+  filter(breakdown_of_domestic_tourism == 'Expenditure') %>% 
   ggplot()+
   geom_line(aes(x = year, y = value ), colour = "blue")+
   labs(
@@ -511,6 +517,19 @@ predict_spend %>%
 
 ---
 
+_Recommendations_
 
+-Improve the survey and join data so it can be possible to show/ investigate which activity is more visit and therefore more suitable for each group age/status.. .
 
+-Understand the importance of tourism in the general economy. The data only reflect the domestic visitor but not the international.
+
+-There are no enough information to combine 'tourism activity' and 'type of location visited'.
+
+-Issue, All GB means England, Scotland and Wales. But its only, Scotland and England in observations but not Wales. Its difficult to subtract  this country from 'All GB'. It should  improve the Wales survey area.
+
+-Improve the International visits/ Expenditure
+
+-You shouldn't say that " Visit Scotland markets Scotland to all parts of the world to attract visitors" when your data provided is only partial Great Britain even not all UK.
+
+In my opinion this Data can no reflect properly  the importance of Tourism in Scottish economic. Also, because is missing the data for international tourism , not reflect the international tourist attraction of the country by its own and inside of UK and the ' soft power' imply.   
 

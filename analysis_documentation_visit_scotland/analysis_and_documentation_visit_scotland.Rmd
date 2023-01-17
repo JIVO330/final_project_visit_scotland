@@ -834,20 +834,19 @@ predict_spend %>%
 
 
 
-
-
 _Recommendations_
 
--Improve the survey and join data so it can be possible to show/ investigate which activity is more visit and therefore more suitable for each group age/status..for groups of people like age or families( children).
-Understand the importance of tourism in the general economy, not index more in pounds. the data only reflect the domestic visitor but not the international.
+-Improve the survey and join data so it can be possible to show/ investigate which activity is more visit and therefore more suitable for each group age/status.. .
+
+-Understand the importance of tourism in the general economy. The data only reflect the domestic visitor but not the international.
 
 -There are no enough information to combine 'tourism activity' and 'type of location visited'.
 
--Issues : the year is an average of 3 years , All GB means England, Scotland and Wales. But its only, Scotland and England in observations but not Wales and its difficult to substract  this country from 'All GB' has to improve the Wales survey
+-Issue, All GB means England, Scotland and Wales. But its only, Scotland and England in observations but not Wales. Its difficult to subtract  this country from 'All GB'. It should  improve the Wales survey area.
 
 -Improve the International visits/ Expenditure
 
-- You shouldn't say that " Visit Scotland markets Scotland to all parts of the world to attract visitors" when your data provided is only partial Great Britain -Dayta from Wales is not specify- even not all UK.
+-You shouldn't say that " Visit Scotland markets Scotland to all parts of the world to attract visitors" when your data provided is only partial Great Britain even not all UK.
 
-So looking for a local tourism. tourism as soft power inside the Isle? In my opi nion this Data can no reflect properly  the importance of Tourism in Scottish economic. Also, because is missing the data for international tourism , not reflect the international tourist attraction of the country by its own and inside of UK and the ' soft power' imply.   
-- Idea : Perhaps need division by Scotland's regions, sites. We should have data from visitors outside of GB in order to have a better understanding of the visitor and improve their experience and compare with inside of GB and see the weight of each group.
+In my opinion this Data can no reflect properly  the importance of Tourism in Scottish economic. Also, because is missing the data for international tourism , not reflect the international tourist attraction of the country by its own and inside of UK and the ' soft power' imply.   
+
