@@ -711,7 +711,7 @@ predict_visits %>%
 
 
 ##
-here were a peak in 2017 in visits to tourism_activity and expenditure, after there are a decrease in total number of visits but a decrease in expenditure. That could means an increase of price of the activities, less offer?. Less tourism but more money or visitors with more/ higher purchasing power
+There were a peak in 2017 in visits to tourism_activity and expenditure, after there are a decrease in total number of visits but a decrease in expenditure. That could means an increase of price of the activities, less offer?. Less tourism but more money or visitors with more/ higher purchasing power
 
 ```{r}
 predict_spend %>% 

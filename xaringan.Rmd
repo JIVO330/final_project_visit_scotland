@@ -26,6 +26,16 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharin
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(tidyverse)
+regional_domestic_tourism_clean  <- read_csv("clean_data/regional_domestic_tourism_clean.csv")
+scottish_accomodation_occupancy_clean <- read_csv("clean_data/scottish_accomodation_occupancy_clean.csv")
+tourism_day_visits_activities_clean <- read_csv("clean_data/tourism_day_visits_activities_clean.csv")
+tourism_day_visits_demmographics_clean <- read_csv("clean_data/tourism_day_visits_demmographics_clean.csv")
+tourism_day_visits_location_clean <- read_csv("clean_data/tourism_day_visits_location_clean.csv")
+tourism_day_visits_transport_clean <- read_csv("clean_data/tourism_day_visits_transport_clean.csv")
+visit_sites_activity <-  read_csv("clean_data/visit_sites_activity.csv")
+
+
 ```
 
 ???
@@ -36,55 +46,257 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 
 ---
 class: middle, center
-# INTRODUCTION / SLICE.
+# INTRODUCTION
 
 
-The aim of this presentation is to show a quick glimpse about the tourist sector between the years 2011 and 2019 in Scotland.Specially the value of visits and the expenditure.
+The aim of this presentation is to show a quick glimpse about the domestic tourist sector between the years 2011 and 2019 in Scotland.Specially the value of visits and the expenditure.
 
 In order to conduct this premise, it had been used the the open data offer by 'Visit Scotland' that can be consult in the website of the Scottish Government : 'statistics.gov.scot'
 
+It is understood by domestic tourist  the person which reside in Great Britain
+
 
 
 ---
-# Data Context/ Disclaimer/ Assumptions - 2nd Slide
+# Data Context/ Disclaimer/ Assumptions 
 
  Before start, it has to be some considerations.
  
-- Some of the data used presented the variable 'region of residence', and observations are  'All GB', 'England' and 'Scotland'.  Due the fact that GB means England, Scotland and Wales,it has been used the the 'All GB' observation because - in our opinion- its the most accurate. 
-- Also one visitor can realize more than one visits  and could lead to a misunderstanding / misinterpretation in the total number of visitors.
--In 2019, Visit Scotland in conjunction with Visit England and Visit Wales change the parameters for recording  domestic overnight trips and domestic day trips. It is believed that this new method can produce differents interpretations in visits and expenditure. More info. 'INSIGHT DEPARTMENT: GBTS 2021 Methodology and Quality'
+- Some of the data used presented the variable 'region of residence', and observations are  'All GB', 'England' and 'Scotland'.  Due the fact that GB means England, Scotland and Wales,it has been used the  'All GB' observation because - in our opinion- should be the most accurate.
 
-- Therefore, the intention is to show a glimpse about how was the tourism  in the country in 2019 and during previous years. All before the introduction of the new method and the disruption caused by the pandemic and the lockdown restrictions during 2020,2021 and the beginning of 2022 plus the current world economic recession.
+- Also one visitor can realize more than one visits. This  fact could lead to a misinterpretation in the total number of visits and visitors.
+
+- In 2019, Visit Scotland in conjunction with Visit England and Visit Wales change the parameters for recording  domestic overnight trips and domestic day trips. It is believed that this new method can produce different interpretations in visits and expenditure. More info. 'INSIGHT DEPARTMENT: GBTS 2021 Methodology and Quality'
+
+- Therefore, the intention is to show a glimpse about how was the tourism  in the country in 2019 and during previous years. Before the introduction of the new method and the disruption caused by the pandemic and the lockdown restrictions during 2020,2021 and the beginning of 2022 plus the current world economic recession.
 
 ---
 
 
-# R Plots
+#  Definitions
+
+Tourism day trip is defined as:
+
+- Taking part in one of a pre-defined list of activities (based on international tourism definitions)
+
+- Spending 3 or more hours out of the home on this activity
+
+- The activity is not doing 'very regularly' by the respondent
+
+- The activity not being carried out in the place that the respondent lives or works
+
+- The exception to this was trips to visitor attractions, live sporting events and special public events, which are all counted as tourism day trips even when in the place of residence, provided they fulfill the other three criteria.
 
 
-```{r setup, include=FALSE}
-library(tidyverse)
-regional_domestic_tourism_clean  <- read_csv("clean_data/regional_domestic_tourism_clean.csv")
-scottish_accomodation_occupancy_clean <- read_csv("clean_data/scottish_accomodation_occupancy_clean.csv")
-tourism_day_visits_activities_clean <- read_csv("clean_data/tourism_day_visits_activities_clean.csv")
-tourism_day_visits_demmographics_clean <- read_csv("clean_data/tourism_day_visits_location_clean.csv")
-tourism_day_visits_location_clean <- read_csv("clean_data/tourism_day_visits_location_clean.csv")
-tourism_day_visits_transport_clean <- read_csv("clean_data/tourism_day_visits_transport_clean.csv")
-visit_sites_activity <-  read_csv("clean_data/visit_sites_activity.csv")
+---
+
+# Tourism in Scotland
+.pull-left[
+The first question  it should be ask is 'how much money means the domestic tourist activity for Scotland?'.
+This visualization answers the question for the period 2013 to 2019. The highest value was in  2017 which nearly 6 Thousand millions Pounds and the low 2015 with a bit less than 4 Thousand millions Pounds.
+
+]
+.pull-right[
+```{r ,echo = FALSE}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity) %>% 
+  filter(tourism_activity == 'All') %>% 
+  filter(units == 'million pounds (GBP)') %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = year, y = value))+
+  geom_col(fill = "light blue", colour = "purple", position = 'dodge')+
+  labs(title =  'Value of the GB tourism for Scotland', subtitle = '2013 -2019 Income', x = 'Year', y = 'million pounds' )+
+  scale_x_continuous(breaks = 2013:2019)
+```
+]
+---
+
+We  can see which are the Tourism Activity and their income in the total value for the year 2019
+"Went out for a meal" was the highest Income. One thing you can do once per week but not 'very regularly'.
+```{r,echo = FALSE}
+tourism_day_visits_activities_clean %>%
+  select(year,units,value,tourism_activity, breakdown_of_domestic_tourism) %>%
+  filter(tourism_activity != 'All') %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(year == 2019) %>% 
+  arrange(desc(year)) %>% 
+   ggplot(aes( x =reorder(tourism_activity,value), y = value))+
+  geom_col(fill = "light blue",
+           position = 'dodge')+
+  labs(title = 'Scotland Highest income 2019' )+
+  xlab('tourism activity' )+
+  ylab('million pounds' )+
+  coord_flip()
+```
+
+
+---
+
+## However..
+
+The higher number of visits for the same year was...
+visit friends or family for leisure (tourism activities?)
+```{r ,echo = FALSE}
+tourism_day_visits_activities_clean %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(year == 2019) %>% 
+  filter(tourism_activity != 'All') %>% 
+   arrange(desc(value)) %>% 
+ggplot(aes( x =reorder(tourism_activity,value), y = value))+
+  geom_col(fill = "light blue",
+           position = 'dodge')+
+  labs(title = 'GB Visits by Tourism Activity in 2019' )+
+  xlab('Activity' )+
+  ylab('million Visit' )+
+  coord_flip()
+```
+
+---
+
+Where were the location of these visits?
+```{r echo = FALSE}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(type_of_location_visited != 'All areas') %>% 
+  filter(year == 2019) %>% 
+   arrange(desc(value)) %>% 
+  ggplot(aes( x =reorder(type_of_location_visited,value), y = value))+
+  geom_col(fill = "light blue",
+           position = 'dodge')+
+  labs(title = 'GB Visits in 2019' )+
+  xlab('Location Visited' )+
+  ylab('million visit' )+
+  coord_flip()
 ```
 ---
+And the expenditure?
+
+```{r echo = FALSE}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Visits') %>% 
+  filter(type_of_location_visited != 'All areas') %>% 
+  filter(year == 2019) %>% 
+   arrange(desc(value)) %>% 
+  ggplot(aes( x =reorder(type_of_location_visited,value), y = value))+
+  geom_col(fill = "light blue",
+           position = 'dodge')+
+  labs(title = 'GB Expenditure in 2019' )+
+  xlab('Location Visited' )+
+  ylab('million pounds' )+
+  coord_flip()
+```
+
 ---
 
-```{rsetup, include=FALSE}
-scottish_accomodation_occupancy_clean %>% 
-  ggplot(aes( x = accommodation_type_and_occupancy))+
-  geom_bar(fill = "light blue", colour = "red")
+## But
+
+Even if the City or large town attract the majority of visits and expenditure.From 2017 there is a - relative- decrease in comparison with other locations such as countryside or seaside in the number of visits.
+```{r echo = FALSE}
+tourism_day_visits_location_clean %>% 
+  select(year, value, type_of_location_visited, breakdown_of_domestic_tourism) %>% 
+  filter(breakdown_of_domestic_tourism != 'Expenditure') %>% 
+  filter(type_of_location_visited != 'All areas') %>% 
+   ggplot(aes( x = year, y = value, colour = type_of_location_visited))+
+  geom_line() +
+  facet_wrap(~type_of_location_visited, scales = 'free_y')+
+labs(
+    title = "GB Visits in Scotland between 2013 -2019",
+    x = "\nyear",
+    y = "millions visits\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+---
+## Visitors between 2013-2019
+
+This is  the general evolution of visitors to Scotland by age. It can argue that there is not a clear tendency, each group of age had a preferred year in visit Scotland. Although from 2017 there is a general decline.Each year is different, for 2019 the data show that mostly all the age groups fall and the only two that grow significantly , 65 or older and 35-44 years old , are under the mark of their best year that was 2016.
+
+
+```{r echo = FALSE}
+tourism_day_visits_demmographics_clean %>% 
+  select(breakdown_of_domestic_tourism, age, value,year) %>% 
+  filter(age != 'All') %>% 
+  filter(breakdown_of_domestic_tourism == 'Visits') %>% 
+  ggplot(aes( x = year, y = value, colour = age))+
+  geom_line()+
+  labs(
+    title = "GB Visitors Age in Scotland between 2011 -2019",
+    x = "\nYear",
+    y = "Average Thousand visits\n") +
+   scale_colour_brewer( palette = "Set2")+
+   scale_x_continuous(breaks = 2013:2019)
+```
+
+---
+## Millions Expenditure by visitors age. More spend people between 25-34 , 55-56 and 35-44.
+
+```{r echo = FALSE}
+tourism_day_visits_demmographics_clean %>% 
+  filter(year == 2019) %>% 
+  filter(breakdown_of_domestic_tourism =='Expenditure') %>% 
+  filter(age != "All") %>% 
+  arrange(desc(value)) %>% 
+  ggplot(aes( x = age, y = value))+
+  geom_col(fill = "light blue")+
+labs(
+    title = "GB Expenditure by Age in Scotland 2019",
+    x = "\nAge",
+    y = "millions Pounds\n") +
+    scale_colour_brewer(guide = "none", palette = "Set2")+
+  coord_flip()
 ```
 
 
 
 
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class: inverse, center, middle
 
@@ -115,7 +327,7 @@ You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rs
 - or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
 
 .footnote[
-[1] 中文用户请看[这份教程](https://slides.yihui.org/xaringan/zh-CN.html)
+[1] ??????????????????[????????????](https://slides.yihui.org/xaringan/zh-CN.html)
 
 [2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
 ]
@@ -252,8 +464,8 @@ Limitations:
 # a boring regression
 fit = lm(dist ~ 1 + speed, data = cars)
 coef(summary(fit))
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
+dojutsu = c('????????????', '??????', '????????????', '??????', '????????????', '????????????')
+grep('???', dojutsu, value = TRUE)
 ```
 
 ---
@@ -634,7 +846,7 @@ background-position: 90% 8%
 
 # Sharingan
 
-The R package name **xaringan** was derived<sup>1</sup> from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
+The R package name **xaringan** was derived<sup>1</sup> from **Sharingan**, a d??jutsu in the Japanese anime _Naruto_ with two abilities:
 
 - the "Eye of Insight"
 
@@ -643,7 +855,7 @@ The R package name **xaringan** was derived<sup>1</sup> from **Sharingan**, a d�
 I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.<sup>2,3</sup>
 
 .footnote[
-[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
+[1] In Chinese, the pronounciation of _X_ is _Sh_ /??/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
 
 [2] By comparison, bad presentations only put the audience to sleep.
 
@@ -656,15 +868,15 @@ I think a presentation is basically a way to communicate insights to the audienc
 
 The **xaringan** package borrowed a few terms from Naruto, such as
 
-- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (写輪眼; the package name)
+- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (?????????; the package name)
 
-- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
+- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (??????; an attractive R Markdown output format)
 
-- [Chakra](https://naruto.fandom.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
+- [Chakra](https://naruto.fandom.com/wiki/Chakra) (?????????; the path to the remark.js library, which is the power to drive the presentation)
 
-- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
+- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (????????????; transform the chakra by setting different options)
 
-- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
+- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (????????????; start a local web server to continuously serve your slides)
 
 - The [summoning technique](https://naruto.fandom.com/wiki/Summoning_Technique) (download remark.js from the web)
 
@@ -674,7 +886,7 @@ You can click the links to know more about them if you want. The jutsu "Moon Rea
 
 class: center
 
-# Hand seals (印)
+# Hand seals (???)
 
 Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
 

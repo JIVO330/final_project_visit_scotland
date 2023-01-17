@@ -41,7 +41,7 @@ class: center, middle, inverse, title-slide
 ### Tilting at Windmills
 ]
 .date[
-### Today: 2023-01-16
+### Today: 2023-01-17
 ]
 
 ---
@@ -59,176 +59,150 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 
 ---
 class: middle, center
-# INTRODUCTION / SLICE.
+# INTRODUCTION
 
 
-The aim of this presentation is to show a quick glimpse about the tourist sector between the years 2011 and 2019 in Scotland.Specially the value of visits and the expenditure.
+The aim of this presentation is to show a quick glimpse about the domestic tourist sector between the years 2011 and 2019 in Scotland.Specially the value of visits and the expenditure.
 
 In order to conduct this premise, it had been used the the open data offer by 'Visit Scotland' that can be consult in the website of the Scottish Government : 'statistics.gov.scot'
 
+It is understood by domestic tourist  the person which reside in Great Britain
+
 
 
 ---
-# Data Context/ Disclaimer/ Assumptions - 2nd Slide
+# Data Context/ Disclaimer/ Assumptions 
 
  Before start, it has to be some considerations.
  
-- Some of the data used presented the variable 'region of residence', and observations are  'All GB', 'England' and 'Scotland'.  Due the fact that GB means England, Scotland and Wales,it has been used the the 'All GB' observation because - in our opinion- its the most accurate. 
-- Also one visitor can realize more than one visits  and could lead to a misunderstanding / misinterpretation in the total number of visitors.
--In 2019, Visit Scotland in conjunction with Visit England and Visit Wales change the parameters for recording  domestic overnight trips and domestic day trips. It is believed that this new method can produce differents interpretations in visits and expenditure. More info. 'INSIGHT DEPARTMENT: GBTS 2021 Methodology and Quality'
+- Some of the data used presented the variable 'region of residence', and observations are  'All GB', 'England' and 'Scotland'.  Due the fact that GB means England, Scotland and Wales,it has been used the  'All GB' observation because - in our opinion- should be the most accurate.
 
-- Therefore, the intention is to show a glimpse about how was the tourism  in the country in 2019 and during previous years. All before the introduction of the new method and the disruption caused by the pandemic and the lockdown restrictions during 2020,2021 and the beginning of 2022 plus the current world economic recession.
+- Also one visitor can realize more than one visits. This  fact could lead to a misinterpretation in the total number of visits and visitors.
+
+- In 2019, Visit Scotland in conjunction with Visit England and Visit Wales change the parameters for recording  domestic overnight trips and domestic day trips. It is believed that this new method can produce different interpretations in visits and expenditure. More info. 'INSIGHT DEPARTMENT: GBTS 2021 Methodology and Quality'
+
+- Therefore, the intention is to show a glimpse about how was the tourism  in the country in 2019 and during previous years. Before the introduction of the new method and the disruption caused by the pandemic and the lockdown restrictions during 2020,2021 and the beginning of 2022 plus the current world economic recession.
 
 ---
 
 
-# R Plots
+#  Definitions
+
+Tourism day trip is defined as:
+
+- Taking part in one of a pre-defined list of activities (based on international tourism definitions)
+
+- Spending 3 or more hours out of the home on this activity
+
+- The activity is not doing 'very regularly' by the respondent
+
+- The activity not being carried out in the place that the respondent lives or works
+
+- The exception to this was trips to visitor attractions, live sporting events and special public events, which are all counted as tourism day trips even when in the place of residence, provided they fulfill the other three criteria.
 
 
+---
 
-```r
-library(tidyverse)
-```
+# Tourism in Scotland
+.pull-left[
+The first question  it should be ask is 'how much money means the domestic tourist activity for Scotland?'.
+This visualization answers the question for the period 2013 to 2019. The highest value was in  2017 which nearly 6 Thousand millions Pounds and the low 2015 with a bit less than 4 Thousand millions Pounds.
 
-```
-## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-## ✔ ggplot2 3.4.0      ✔ purrr   0.3.5 
-## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
-## ✔ tidyr   1.2.1      ✔ stringr 1.4.1 
-## ✔ readr   2.1.3      ✔ forcats 0.5.2
-```
+]
+.pull-right[
+![](xaringan_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+]
+---
 
-```
-## Warning: package 'ggplot2' was built under R version 4.2.2
-```
-
-```
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-```
-
-```r
-regional_domestic_tourism_clean  &lt;- read_csv("clean_data/regional_domestic_tourism_clean.csv")
-```
-
-```
-## Rows: 2673 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (6): area, year, measurement, units, region_of_residence, breakdown_of_d...
-## dbl (1): value
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-```r
-scottish_accomodation_occupancy_clean &lt;- read_csv("clean_data/scottish_accomodation_occupancy_clean.csv")
-```
-
-```
-## Rows: 711 Columns: 9
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (7): area, measurement, units, accommodation_type_and_occupancy, weekday...
-## dbl (2): year, value
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-```r
-tourism_day_visits_activities_clean &lt;- read_csv("clean_data/tourism_day_visits_activities_clean.csv")
-```
-
-```
-## Rows: 224 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (5): area, measurement, units, tourism_activity, breakdown_of_domestic_t...
-## dbl (2): year, value
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-```r
-tourism_day_visits_demmographics_clean &lt;- read_csv("clean_data/tourism_day_visits_location_clean.csv")
-```
-
-```
-## Rows: 112 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (5): area, measurement, units, type_of_location_visited, breakdown_of_do...
-## dbl (2): year, value
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-```r
-tourism_day_visits_location_clean &lt;- read_csv("clean_data/tourism_day_visits_location_clean.csv")
-```
-
-```
-## Rows: 112 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (5): area, measurement, units, type_of_location_visited, breakdown_of_do...
-## dbl (2): year, value
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-```r
-tourism_day_visits_transport_clean &lt;- read_csv("clean_data/tourism_day_visits_transport_clean.csv")
-```
-
-```
-## Rows: 236 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (5): area, measurement, units, method_of_travel, breakdown_of_domestic_t...
-## dbl (2): year, value
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-```r
-visit_sites_activity &lt;-  read_csv("clean_data/visit_sites_activity.csv")
-```
-
-```
-## Rows: 302 Columns: 8
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (6): area, measurement, units, type_of_location_visited, breakdown_of_do...
-## dbl (2): year, value
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-
-
-
-
-```r
-scottish_accomodation_occupancy_clean %&gt;% 
-  ggplot(aes( x = accommodation_type_and_occupancy))+
-  geom_bar(fill = "light blue", colour = "red")
-```
-
+We  can see which are the Tourism Activity and their income in the total value for the year 2019
+"Went out for a meal" was the highest Income. One thing you can do once per week but not 'very regularly'.
 ![](xaringan_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
 
 
+---
+
+## However..
+
+The higher number of visits for the same year was...
+visit friends or family for leisure (tourism activities?)
+![](xaringan_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+
+---
+
+Where were the location of these visits?
+![](xaringan_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+---
+And the expenditure?
+
+![](xaringan_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+
+## But
+
+Even if the City or large town attract the majority of visits and expenditure.From 2017 there is a - relative- decrease in comparison with other locations such as countryside or seaside in the number of visits.
+![](xaringan_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+---
+## Visitors between 2013-2019
+
+This is  the general evolution of visitors to Scotland by age. It can argue that there is not a clear tendency, each group of age had a preferred year in visit Scotland. Although from 2017 there is a general decline.Each year is different, for 2019 the data show that mostly all the age groups fall and the only two that grow significantly , 65 or older and 35-44 years old , are under the mark of their best year that was 2016.
+
+
+![](xaringan_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+---
+## Millions Expenditure by visitors age. More spend people between 25-34 , 55-56 and 35-44.
+
+![](xaringan_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+
+
+
+
 
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class: inverse, center, middle
 
@@ -260,7 +234,7 @@ You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rs
 - or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)&lt;sup&gt;2&lt;/sup&gt; "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
 
 .footnote[
-[1] 中文用户请看[这份教程](https://slides.yihui.org/xaringan/zh-CN.html)
+[1] ??????????????????[????????????](https://slides.yihui.org/xaringan/zh-CN.html)
 
 [2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
 ]
@@ -407,12 +381,13 @@ coef(summary(fit))
 ```
 
 ```r
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
+dojutsu = c('????????????', '??????', '????????????', '??????', '????????????', '????????????')
+grep('???', dojutsu, value = TRUE)
 ```
 
 ```
-# [1] "地爆天星" "天照"
+# [1] "????????????" "??????"       "????????????" "??????"       "????????????"
+# [6] "????????????"
 ```
 
 ---
@@ -513,8 +488,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div id="htmlwidget-f378134cc26df1202d9c" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f378134cc26df1202d9c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-614473d0ce79e0e2918f" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-614473d0ce79e0e2918f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -526,8 +501,8 @@ DT::datatable(
 )
 ```
 
-<div id="htmlwidget-8ff7d785d11baffad3ed" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8ff7d785d11baffad3ed">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7b5e407e5d6cc5ee00ea" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7b5e407e5d6cc5ee00ea">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -893,7 +868,7 @@ background-position: 90% 8%
 
 # Sharingan
 
-The R package name **xaringan** was derived&lt;sup&gt;1&lt;/sup&gt; from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
+The R package name **xaringan** was derived&lt;sup&gt;1&lt;/sup&gt; from **Sharingan**, a d??jutsu in the Japanese anime _Naruto_ with two abilities:
 
 - the "Eye of Insight"
 
@@ -902,7 +877,7 @@ The R package name **xaringan** was derived&lt;sup&gt;1&lt;/sup&gt; from **Shari
 I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.&lt;sup&gt;2,3&lt;/sup&gt;
 
 .footnote[
-[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
+[1] In Chinese, the pronounciation of _X_ is _Sh_ /??/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
 
 [2] By comparison, bad presentations only put the audience to sleep.
 
@@ -915,15 +890,15 @@ I think a presentation is basically a way to communicate insights to the audienc
 
 The **xaringan** package borrowed a few terms from Naruto, such as
 
-- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (写輪眼; the package name)
+- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (?????????; the package name)
 
-- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
+- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (??????; an attractive R Markdown output format)
 
-- [Chakra](https://naruto.fandom.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
+- [Chakra](https://naruto.fandom.com/wiki/Chakra) (?????????; the path to the remark.js library, which is the power to drive the presentation)
 
-- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
+- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (????????????; transform the chakra by setting different options)
 
-- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
+- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (????????????; start a local web server to continuously serve your slides)
 
 - The [summoning technique](https://naruto.fandom.com/wiki/Summoning_Technique) (download remark.js from the web)
 
@@ -933,7 +908,7 @@ You can click the links to know more about them if you want. The jutsu "Moon Rea
 
 class: center
 
-# Hand seals (印)
+# Hand seals (???)
 
 Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
 
