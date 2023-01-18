@@ -12,23 +12,21 @@ Diary. Friday. Work in question 3, join two dataset for investigate an answer.
 
 
 
-
-    Dictionary
-It is unclear the meaning of some  variables.
-
     Some reflections about the data.
 
+The data used is from the period 2011 - 2019
+
 In "Regional domestic tourism data" the date_code is quite unclear, is a period of 2 or 3 years from 1st January till 31st December? Also, in some case the periods take years from other periods. The data has a period-time from 2010 till 2019 that is different from other data sets. 
-Try to avoid this data 
+
+It's not a raw data, it was already manipulated. And it avoid some questions like relation between location and tourism activity. 
 
 
-Regions means Countries inside GB ( NOT UK which include North Ireland) that means England, Scotland and Wales. However the data doesn't have any observation with Wales, why?. ecuse its incedence is too small.
+Regions means Countries inside GB ( NOT UK which include North Ireland) that means England, Scotland and Wales. However the data doesn't have any observation with Wales, why?. Perhaps its incidence is too small.
 
 
-Standards were change in 2019, the data is before that date.
 
+In 2019 the methodology for recording  domestic overnight trips and domestic day trips. It is believed that this new method can produce different interpretations in visits and expenditure. More info. 'INSIGHT DEPARTMENT: GBTS 2021 Methodology and Quality'
 
-Are the data right/ precise? Correct reading
 
 Social grades. maybe needed for answer any question
 
@@ -822,17 +820,6 @@ predict_spend %>%
     y = "millions Pounds\n") +
    scale_x_continuous(breaks = 2013:2019)
 ```
-
-
-
-
-
-
-
-
-
-
-
 
 _Recommendations_
 
